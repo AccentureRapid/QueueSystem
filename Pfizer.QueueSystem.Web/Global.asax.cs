@@ -14,7 +14,9 @@ namespace Pfizer.QueueSystem.Web
             AbpBootstrapper.IocManager.IocContainer.AddFacility<LoggingFacility>(
                 f => f.UseAbpLog4Net().WithConfig(Server.MapPath("log4net.config"))
             );
-            
+
+            RabbitMQService.Subscribe();
+
             base.Application_Start(sender, e);
         }
     }

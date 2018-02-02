@@ -1,0 +1,41 @@
+﻿using EasyNetQ;
+using System.Diagnostics;
+using System.Web.Optimization;
+
+namespace Pfizer.QueueSystem.Web
+{
+    public static class RabbitMQService
+    {
+        private static IBus _bus;
+        static RabbitMQService()
+        {
+            if (_bus == null)
+            {
+                _bus = BusFactory.CreateMessageBus();
+            }
+        }
+
+        public static void Subscribe()
+        {
+            _bus.SubscribeAsync<string>("NewClientQueuedMessage", message
+                => System.Threading.Tasks.Task.Factory.StartNew(() =>
+                {
+                    
+                    Debug.WriteLine("Hello world.");
+
+                }).ContinueWith(task =>
+                {
+                    if (task.IsCompleted && !task.IsFaulted)
+                    {
+                        // Everything worked out ok
+                    }
+                    else
+                    {
+                        // Dont catch this, it is caught further up the heirarchy and results in being sent to the default error queue
+                        // on the broker
+                        throw new EasyNetQException("NewClientQueuedMessage processing exception - look in the default error queue (broker)");
+                    }
+                }));
+        }
+    }
+}
