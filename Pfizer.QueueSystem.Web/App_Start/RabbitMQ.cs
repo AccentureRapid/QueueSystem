@@ -1,4 +1,5 @@
 ﻿using EasyNetQ;
+using Pfizer.QueueSystem.Web.Models.Message;
 using System.Diagnostics;
 using System.Web.Optimization;
 
@@ -17,11 +18,14 @@ namespace Pfizer.QueueSystem.Web
 
         public static void Subscribe()
         {
-            _bus.SubscribeAsync<string>("NewClientQueuedMessage", message
+            _bus.SubscribeAsync<ClientQueueMessage>("NewClientQueuedMessage", message
                 => System.Threading.Tasks.Task.Factory.StartNew(() =>
                 {
-                    
-                    Debug.WriteLine("Hello world.");
+                    var userEID = message.UserEID;
+                    var userName = message.UserName;
+                    //TODO Save the queue message to data storage, like sql server etc
+
+                    Debug.WriteLine(string.Format("Hello : {0} with {1}, you are in the queue now.", userEID, userName));
 
                 }).ContinueWith(task =>
                 {
