@@ -30,6 +30,8 @@ using Pfizer.QueueSystem.Web.Models.Account;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using Abp.Events.Bus;
+using Pfizer.QueueSystem.Web.Models.Events;
 
 namespace Pfizer.QueueSystem.Web.Controllers
 {
@@ -45,6 +47,7 @@ namespace Pfizer.QueueSystem.Web.Controllers
         private readonly ILanguageManager _languageManager;
         private readonly ITenantCache _tenantCache;
         private readonly IAuthenticationManager _authenticationManager;
+        private readonly IEventBus _eventBus;
 
         public AccountController(
             TenantManager tenantManager,
@@ -56,7 +59,8 @@ namespace Pfizer.QueueSystem.Web.Controllers
             ISessionAppService sessionAppService,
             ILanguageManager languageManager, 
             ITenantCache tenantCache, 
-            IAuthenticationManager authenticationManager)
+            IAuthenticationManager authenticationManager,
+            IEventBus eventBus)
         {
             _tenantManager = tenantManager;
             _userManager = userManager;
@@ -68,6 +72,7 @@ namespace Pfizer.QueueSystem.Web.Controllers
             _languageManager = languageManager;
             _tenantCache = tenantCache;
             _authenticationManager = authenticationManager;
+            _eventBus = eventBus;
         }
 
         #region Login / Logout
@@ -114,6 +119,8 @@ namespace Pfizer.QueueSystem.Web.Controllers
             {
                 returnUrl = returnUrl + returnUrlHash;
             }
+
+            _eventBus.Trigger(new LoginEventData {  UserName = loginResult.User.UserName });
 
             return Json(new AjaxResponse { TargetUrl = returnUrl });
         }

@@ -2862,10 +2862,12 @@
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\TenantsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="EventHandler\LoginEventHandler.cs" />
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Models\Account\TenantChangeModalViewModel.cs" />
     <Compile Include="Models\Account\TenantChangeViewModel.cs" />
     <Compile Include="Models\Common\Modals\ModalHeaderViewModel.cs" />
+    <Compile Include="Models\Events\LoginEventData.cs" />
     <Compile Include="Models\Layout\RightSideBarViewModel.cs" />
     <Compile Include="Models\Account\LoginFormViewModel.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
