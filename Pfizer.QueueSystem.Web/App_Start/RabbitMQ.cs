@@ -41,5 +41,9 @@ namespace Pfizer.QueueSystem.Web
                     }
                 }));
         }
+        public static void UnSubscribe()
+        {
+            _bus.SafeDispose();
+        }
     }
 }

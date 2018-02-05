@@ -19,5 +19,10 @@ namespace Pfizer.QueueSystem.Web
 
             base.Application_Start(sender, e);
         }
+
+        protected override void Application_End(object sender, EventArgs e)
+        {
+            RabbitMQService.UnSubscribe();
+        }
     }
 }
