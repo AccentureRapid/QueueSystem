@@ -12,7 +12,7 @@ namespace Pfizer.QueueSystem.Web
         {
             if (_bus == null)
             {
-                _bus = BusFactory.CreateMessageBus();
+                _bus = BusFactory.GetMessageBus();
             }
         }
 

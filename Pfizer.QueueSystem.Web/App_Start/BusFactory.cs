@@ -10,7 +10,10 @@ namespace Pfizer.QueueSystem.Web
 {
     public static class BusFactory
     {
-        public static IBus CreateMessageBus()
+        private static IBus _bus;
+
+        
+        private static IBus CreateMessageBus()
         {
             var connectionString = ConfigurationManager.ConnectionStrings["RabbitMQ"];
             if (connectionString == null || connectionString.ConnectionString == string.Empty)
@@ -19,5 +22,16 @@ namespace Pfizer.QueueSystem.Web
             }
             return RabbitHutch.CreateBus(connectionString.ConnectionString);
         }
+
+        public static IBus GetMessageBus()
+        {
+            if (_bus == null)
+            {
+                _bus = BusFactory.CreateMessageBus();
+            }
+
+            return _bus; 
+        }
+
     }
 }

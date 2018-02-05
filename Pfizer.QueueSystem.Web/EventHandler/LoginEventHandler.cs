@@ -23,7 +23,7 @@ namespace Pfizer.QueueSystem.Web.EventHandler
         public LoginEventEventHandler(IBackgroundJobManager backgroundJobManager)
         {
             _backgroundJobManager = backgroundJobManager;
-            _bus = BusFactory.CreateMessageBus();
+            _bus = BusFactory.GetMessageBus();
 
             Logger = NullLogger.Instance;
         }
