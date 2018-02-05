@@ -207,6 +207,10 @@
     <Compile Include="Migrations\201710131316266_UpgradedTo_ABP_3.1.Designer.cs">
       <DependentUpon>201710131316266_UpgradedTo_ABP_3.1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802050702557_QueueHistoryAdded.cs" />
+    <Compile Include="Migrations\201802050702557_QueueHistoryAdded.Designer.cs">
+      <DependentUpon>201802050702557_QueueHistoryAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="QueueSystemDataModule.cs" />
@@ -235,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710131316266_UpgradedTo_ABP_3.1.resx">
       <DependentUpon>201710131316266_UpgradedTo_ABP_3.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802050702557_QueueHistoryAdded.resx">
+      <DependentUpon>201802050702557_QueueHistoryAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,7 +1,10 @@
 ﻿using System.Data.Common;
+using System.Data.Entity;
+using System.Threading.Tasks;
 using Abp.Zero.EntityFramework;
 using Pfizer.QueueSystem.Authorization.Roles;
 using Pfizer.QueueSystem.Authorization.Users;
+using Pfizer.QueueSystem.Entities;
 using Pfizer.QueueSystem.MultiTenancy;
 
 namespace Pfizer.QueueSystem.EntityFramework
@@ -9,6 +12,7 @@ namespace Pfizer.QueueSystem.EntityFramework
     public class QueueSystemDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         //TODO: Define an IDbSet for your Entities...
+        public DbSet<QueueHistory> QueueHistory { get; set; }
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
