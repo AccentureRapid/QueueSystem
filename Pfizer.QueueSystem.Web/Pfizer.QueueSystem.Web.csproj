@@ -2848,7 +2848,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BusFactory.cs" />
-    <Compile Include="App_Start\RabbitMQ.cs" />
+    <Compile Include="App_Start\IRabbitMQService.cs" />
+    <Compile Include="App_Start\RabbitMQService.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\QueueSystemNavigationProvider.cs" />
     <Compile Include="App_Start\QueueSystemWebModule.cs" />

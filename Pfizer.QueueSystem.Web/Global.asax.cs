@@ -2,8 +2,10 @@
 using System.Threading;
 using Abp.Castle.Logging.Log4Net;
 using Abp.Web;
+using Abp.Dependency;
 using Abp.WebApi.Validation;
 using Castle.Facilities.Logging;
+using Pfizer.QueueSystem.Web.App_Start;
 
 namespace Pfizer.QueueSystem.Web
 {
@@ -14,15 +16,18 @@ namespace Pfizer.QueueSystem.Web
             AbpBootstrapper.IocManager.IocContainer.AddFacility<LoggingFacility>(
                 f => f.UseAbpLog4Net().WithConfig(Server.MapPath("log4net.config"))
             );
-
-            RabbitMQService.Subscribe();
-
             base.Application_Start(sender, e);
+
+            var rabbit = AbpBootstrapper.IocManager.IocContainer.Resolve<IRabbitMQService>();
+            rabbit.Subscribe();
+            //RabbitMQService.Subscribe();
         }
 
         protected override void Application_End(object sender, EventArgs e)
         {
-            RabbitMQService.UnSubscribe();
+            var rabbit = AbpBootstrapper.IocManager.IocContainer.Resolve<IRabbitMQService>();
+            rabbit.UnSubscribe();
+            //RabbitMQService.UnSubscribe();
         }
     }
 }

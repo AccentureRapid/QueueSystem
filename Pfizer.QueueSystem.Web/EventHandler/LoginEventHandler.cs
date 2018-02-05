@@ -32,6 +32,7 @@ namespace Pfizer.QueueSystem.Web.EventHandler
         {
             _bus.Publish(new ClientQueueMessage
             {
+                UserEID = eventData.UserName,
                 UserName = eventData.UserName
             });
         }
