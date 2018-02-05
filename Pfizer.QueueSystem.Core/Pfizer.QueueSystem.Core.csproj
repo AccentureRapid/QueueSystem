@@ -179,6 +179,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\QueueHistory.cs" />
     <Compile Include="QueueSystemConsts.cs" />
     <Compile Include="QueueSystemCoreModule.cs" />
     <Compile Include="AppVersionHelper.cs" />
