@@ -19,6 +19,13 @@ namespace Pfizer.QueueSystem.Services
             _queueHistoryManager = queueHistoryManager;
             _objectMapper = objectMapper;
         }
+
+        public async Task<int> GetQueueHistoryCount()
+        {
+            var count = await _queueHistoryManager.GetQueueHistoryCount();
+            return count;
+        }
+
         public async Task SaveQueueHistory(QueueHistoryDto input)
         {
             var entity = _objectMapper.Map<QueueHistory>(input);

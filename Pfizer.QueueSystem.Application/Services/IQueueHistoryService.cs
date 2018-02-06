@@ -11,5 +11,7 @@ namespace Pfizer.QueueSystem.Services
     public interface IQueueHistoryService : IApplicationService
     {
         Task SaveQueueHistory(QueueHistoryDto history);
+
+        Task<int> GetQueueHistoryCount();
     }
 }

@@ -18,6 +18,13 @@ namespace Pfizer.QueueSystem.Services
             _queueHistoryRepository = queueHistoryRepository;
         }
 
+        public async Task<int> GetQueueHistoryCount()
+        {
+            var list = await _queueHistoryRepository.GetAllListAsync();
+            var count = list.Count();
+            return count;
+        }
+
         public async Task<int> SaveQueueHistory(QueueHistory history)
         {
            var id = await _queueHistoryRepository.InsertAndGetIdAsync(history);
