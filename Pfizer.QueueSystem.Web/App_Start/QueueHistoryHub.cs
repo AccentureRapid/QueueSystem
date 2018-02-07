@@ -24,10 +24,10 @@ public class QueueHistoryHub : Hub, ISingletonDependency
         Logger = NullLogger.Instance;
     }
 
-    public async void SendMessage()
+    public async Task SendMessage(string message)
     {
         var count = await _queueHistoryService.GetQueueHistoryCount();
-        Clients.All.getMessage(string.Format("User {0}, currently there are {1} users in the queue.", AbpSession.UserId, count));
+        Clients.All.getMessage(string.Format("User {0}, currently there are {1} users in the queue. Message from client {2}", AbpSession.UserId, count, message));
     }
 
     public async override Task OnConnected()
