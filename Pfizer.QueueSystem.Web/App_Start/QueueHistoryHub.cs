@@ -33,6 +33,10 @@ public class QueueHistoryHub : Hub, ISingletonDependency
     public async override Task OnConnected()
     {
         await base.OnConnected();
+        //TODO get the EID from querystring, then get the count in front of me by eid
+        //var eid = Context.QueryString["eid"];
+        var count = await _queueHistoryService.GetQueueHistoryCount();
+        Clients.Client(Context.ConnectionId).getMessage(string.Format("There are {0} in front of me.", count));
         Logger.Debug("A client connected to QueueHistoryHub: " + Context.ConnectionId);
     }
 
