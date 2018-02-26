@@ -204,7 +204,9 @@
     <Compile Include="Authorization\Users\UserManager.cs" />
     <Compile Include="Authorization\Users\UserStore.cs" />
     <Compile Include="Services\IQueueHistoryManager.cs" />
+    <Compile Include="Services\IQueueSystemManager.cs" />
     <Compile Include="Services\QueueHistoryManager.cs" />
+    <Compile Include="Services\QueueSystemManager.cs" />
     <Compile Include="Validation\ValidationHelper.cs" />
   </ItemGroup>
   <ItemGroup>

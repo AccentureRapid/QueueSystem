@@ -211,7 +211,9 @@
     <Compile Include="Roles\IRoleAppService.cs" />
     <Compile Include="Services\Dto\QueueHistoryDto.cs" />
     <Compile Include="Services\IQueueHistoryService.cs" />
+    <Compile Include="Services\IQueueSystemService.cs" />
     <Compile Include="Services\QueueHistoryService.cs" />
+    <Compile Include="Services\QueueSystemService.cs" />
     <Compile Include="Users\Dto\CreateUserDto.cs" />
     <Compile Include="Users\Dto\UpdateUserDto.cs" />
     <Compile Include="Users\Dto\UserDto.cs" />
