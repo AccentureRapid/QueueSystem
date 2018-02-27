@@ -30,7 +30,7 @@ namespace WebApiClientSample.Controllers
             {
                 if (onlineCustomersCount > allowedMaxOnlineCustomerCount)
                 {
-                    Response.Redirect("http://localhost:8085");
+                    Response.Redirect(string.Format(@"http://localhost:8085/queue?eid={0}","admin"));
                 }
             }
 
