@@ -11,5 +11,7 @@ namespace Pfizer.QueueSystem.Services
     public interface IQueueSystemService : IApplicationService
     {
         Task<int> GetOnlineCustomersCount();
+
+        Task<bool> CanAccessSystem();
     }
 }
