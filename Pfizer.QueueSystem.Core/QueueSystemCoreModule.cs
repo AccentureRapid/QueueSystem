@@ -43,6 +43,8 @@ namespace Pfizer.QueueSystem
             Configuration.Authorization.Providers.Add<QueueSystemAuthorizationProvider>();
 
             Configuration.Settings.Providers.Add<AppSettingProvider>();
+
+            Configuration.DefaultNameOrConnectionString = "FaceDeviceLog";
         }
 
         public override void Initialize()

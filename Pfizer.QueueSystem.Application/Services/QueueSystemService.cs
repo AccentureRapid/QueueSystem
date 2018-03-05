@@ -25,7 +25,7 @@ namespace Pfizer.QueueSystem.Services
         {
             var allowedMaxOnlineCustomerCount = Convert.ToInt32(ConfigurationManager.AppSettings["AllowedMaxOnlineCustomerCount"]);
             var onlineCustomersMinutes = Convert.ToInt32(ConfigurationManager.AppSettings["OnlineCustomerMinutes"]);
-            var onlineCustomersCount = await _queueSystemManager.GetOnlineCustomersCount(DateTime.UtcNow.AddMinutes(-onlineCustomersMinutes));
+            var onlineCustomersCount = await _queueSystemManager.GetOnlineCustomersCount(DateTime.Now.AddMinutes(-onlineCustomersMinutes));
 
             if (onlineCustomersCount >= allowedMaxOnlineCustomerCount)
             {
@@ -37,7 +37,7 @@ namespace Pfizer.QueueSystem.Services
         public async Task<int> GetOnlineCustomersCount()
         {
             var onlineCustomersMinutes = Convert.ToInt32(ConfigurationManager.AppSettings["OnlineCustomerMinutes"]);
-            var count = await _queueSystemManager.GetOnlineCustomersCount(DateTime.UtcNow.AddMinutes(-onlineCustomersMinutes));
+            var count = await _queueSystemManager.GetOnlineCustomersCount(DateTime.Now.AddMinutes(-onlineCustomersMinutes));
             return count;
         }   
     }

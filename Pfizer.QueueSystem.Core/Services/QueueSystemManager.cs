@@ -1,32 +1,50 @@
-﻿using Abp.Domain.Repositories;
+﻿using Abp.Dependency;
+using Abp.Domain.Repositories;
 using Abp.Domain.Services;
 using Pfizer.QueueSystem.Entities;
+using Pfizer.QueueSystem.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Pfizer.QueueSystem.Services
 {
     public class QueueSystemManager : DomainService, IQueueSystemManager
     {
         private readonly IRepository<QueueHistory> _queueHistoryRepository;
-
-        public QueueSystemManager(IRepository<QueueHistory> queueHistoryRepository)
+        private readonly IRepository<RequestTableForFace, Guid> _requestTableForFaceRepository;
+        private readonly IIocManager _iocManager;
+        private FaceDeviceLogDbContext db
+        {
+            get
+            {
+                return _iocManager.ResolveAsDisposable<FaceDeviceLogDbContext>().Object;
+            }
+        }
+        public QueueSystemManager(IRepository<QueueHistory> queueHistoryRepository,
+             IRepository<RequestTableForFace, Guid> requestTableForFaceRepository,
+            IIocManager iocManager)
         {
             _queueHistoryRepository = queueHistoryRepository;
+            _requestTableForFaceRepository = requestTableForFaceRepository;
+            _iocManager = iocManager;
         }
 
         public async Task<int> GetOnlineCustomersCount(DateTime lastActivityFromUtc)
         {
-            //TODO
-            //var query = _customerRepository.Table;
-            //query = query.Where(c => lastActivityFromUtc <= c.LastActivityDateUtc);
+            var result = await Task.Run(() => {
+                var query = from r in this.db.RequestTableForFace
+                            select r;
 
-            var list = await _queueHistoryRepository.GetAllListAsync();
-            var count = list.Count();
-            return count;
+                var list = query.Where(x => x.EndDate >= lastActivityFromUtc).ToList();
+                var count = list.Count();
+                return count;
+            });
+
+            return result;
         }
     }
 }
