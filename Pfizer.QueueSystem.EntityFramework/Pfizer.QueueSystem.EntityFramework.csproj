@@ -211,6 +211,10 @@
     <Compile Include="Migrations\201802050702557_QueueHistoryAdded.Designer.cs">
       <DependentUpon>201802050702557_QueueHistoryAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803060646178_ConnectionIdAdded.cs" />
+    <Compile Include="Migrations\201803060646178_ConnectionIdAdded.Designer.cs">
+      <DependentUpon>201803060646178_ConnectionIdAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="QueueSystemDataModule.cs" />
@@ -242,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802050702557_QueueHistoryAdded.resx">
       <DependentUpon>201802050702557_QueueHistoryAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803060646178_ConnectionIdAdded.resx">
+      <DependentUpon>201803060646178_ConnectionIdAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

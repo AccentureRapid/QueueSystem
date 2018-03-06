@@ -26,6 +26,7 @@ namespace Pfizer.QueueSystem.Entities
 
         [MaxLength(MaxUserNameLength)]
         public string UserName { get; set; }
+        public string ConnectionId { get; set; }
         public DateTime CreationTime { get; set; }
 
         public QueueStatus Status { get; set; }
