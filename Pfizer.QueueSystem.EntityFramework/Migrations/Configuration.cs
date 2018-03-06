@@ -14,6 +14,8 @@ namespace Pfizer.QueueSystem.Migrations
         {
             AutomaticMigrationsEnabled = false;
             ContextKey = "QueueSystem";
+
+
         }
 
         protected override void Seed(QueueSystem.EntityFramework.QueueSystemDbContext context)
