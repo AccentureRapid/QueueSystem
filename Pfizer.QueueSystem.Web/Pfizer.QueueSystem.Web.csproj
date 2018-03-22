@@ -541,6 +541,8 @@
     <Content Include="fonts\roboto\roboto.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="images\face.jpg" />
+    <Content Include="images\pfizer_logo.jpg" />
     <Content Include="images\user-img-background.jpg" />
     <Content Include="images\user.png" />
     <Content Include="js\admin.js" />
