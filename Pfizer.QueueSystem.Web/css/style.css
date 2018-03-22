@@ -7735,7 +7735,7 @@ fieldset[disabled] .form-control {
       margin-top: -5px; }
 /* queue Page ================================== */
 .queue-page {
-    background-color: #00BCD4;
+    background-color: white;
     padding-left: 0;
     max-width: 100%;
     height:auto;
