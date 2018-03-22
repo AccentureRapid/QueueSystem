@@ -5,3 +5,15 @@
 .famfamfam-flags {
   display: inline-block;
 }
+.queue-information-container {
+    height: 200px;
+    text-align: center;
+}
+.fast-token-container {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.fast-token-container p{
+    font-size:large;
+}

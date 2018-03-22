@@ -32,15 +32,17 @@
 </head>
 <body class="queue-page">
     <div class="queue-box">
-        <div class="logo">
+        <div class="">
             <img src="~/images/pfizer_logo.jpg" width="78" height="48" alt="User" />
             <img src="~/images/face.jpg" width="125" height="48" alt="User" />
+        </div>
+        <div class="logo">
             <a href="javascript:void(0);">Pfizer Queue System</a>
         </div>
 
         @RenderBody()
 
-        <div class="row">
+        <div class="row navbar-fixed-bottom">
             <div class="col-xs-12 text-center" style="color: #e9e9e9">
                 <small>&copy; @DateTime.Now.Year QueueSystem. <b>Version </b> @AppVersionHelper.Version [@AppVersionHelper.ReleaseDate.ToString("yyyyMMdd")]</small>
             </div>

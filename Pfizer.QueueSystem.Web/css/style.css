@@ -7737,10 +7737,14 @@ fieldset[disabled] .form-control {
 .queue-page {
     background-color: #00BCD4;
     padding-left: 0;
-    max-width: 360px;
-    margin: 5% auto;
+    max-width: 100%;
+    height:auto;
+    margin: auto;
     overflow-x: hidden;
 }
+    .queue-page .queue-box {
+        height: auto;
+    }
 
     .queue-page .queue-box .msg {
         color: #555;
