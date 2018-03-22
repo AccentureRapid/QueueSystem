@@ -1,0 +1,23 @@
+﻿@using Abp.MultiTenancy
+@using Abp.Web.Mvc.Extensions
+@using Microsoft.Owin.Security
+@model Pfizer.QueueSystem.Web.Models.Account.LoginFormViewModel
+@section Styles
+{
+    @Html.IncludeStyle("~/Views/QueueSystem/Queue.css")
+}
+@section Scripts
+{
+    @Html.IncludeScript("~/Views/QueueSystem/Queue.js")
+}
+
+<div class="container">
+    <div class="body">
+        <p>抱歉，当前系统访问人数过多，您已加入排队等候系统，请稍等片刻</p>
+        <p>当前队列：<strong>36</strong> 预计等待时间： <strong>52</strong> 分钟</p> 
+
+        <p>您还可以领取快速通行令牌在一下我们推荐的时间段享有优先访问。</p>
+        <input type="datetime" /> <button id="btnTake" class="success">领取</button>
+        <p>您已领取快速通行令牌在此时间段：2017/12/5 17：00 - 18：00，在此时间段将享有优先访问。</p>
+    </div>
+</div>

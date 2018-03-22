@@ -2831,6 +2831,11 @@
     <Content Include="Views\Account\_TenantChange.js" />
     <Content Include="Views\Account\_TenantChangeModal.js" />
     <Content Include="Views\Home\Index.js" />
+    <Content Include="Views\QueueSystem\Queue.css" />
+    <Content Include="Views\QueueSystem\Queue.js" />
+    <Content Include="Views\QueueSystem\Queue.min.css" />
+    <Content Include="Views\QueueSystem\_Layout.css" />
+    <Content Include="Views\QueueSystem\_Layout.min.css" />
     <Content Include="Views\Roles\Index.js" />
     <Content Include="Views\Roles\_EditRoleModal.js" />
     <Content Include="Views\Shared\_Layout.css" />
@@ -2858,6 +2863,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\QueueSystemController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Results\ChallengeResult.cs" />
@@ -3008,6 +3014,11 @@
     <Content Include="Views\Tenants\_EditTenantModal.cshtml" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Views\QueueSystem\Queue.cshtml" />
+    <Content Include="Views\QueueSystem\Queue.less" />
+    <Content Include="Views\QueueSystem\_Layout.cshtml" />
+    <Content Include="Views\QueueSystem\_Layout.less" />
+    <Content Include="Views\QueueSystem\_ViewStart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3051,7 +3062,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61814</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
