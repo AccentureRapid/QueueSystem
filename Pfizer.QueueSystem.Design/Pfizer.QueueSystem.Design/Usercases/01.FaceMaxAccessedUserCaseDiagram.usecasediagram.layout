@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="FaceMaxAccessedUserCaseDiagram">
+  <useCaseModelRootMoniker Id="7459c5f2-509c-4420-b933-fa494c0b3afe" />
+  <nestedChildShapes>
+    <actorShape Id="9451443e-9f86-4d9f-a02c-d7fc4996c3c5" absoluteBounds="2.25, 1.125, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="0937294a-ab95-4dc6-be5d-017f60d3ae94" LastKnownName="Actor1" />
+      <relativeChildShapes />
+    </actorShape>
+    <commentShape Id="3910e519-c151-4196-8bd2-1a60669832a4" absoluteBounds="4.25, 2, 3.25, 3.5" customColor="251, 247, 200">
+      <commentMoniker Id="3cd005c6-f49f-4dab-95c7-f96e0b632602" />
+      <relativeChildShapes />
+    </commentShape>
+    <SubsystemShape Id="38cec43a-21a2-4aa4-89b3-0d72b0af9c4c" absoluteBounds="1.75, 2.125, 1.5, 1.375" customColor="White">
+      <subsystemMoniker Id="72915df2-a9dc-4294-9024-9f15455712bc" LastKnownName="Face System" />
+    </SubsystemShape>
+    <useCaseDependencyConnector edgePoints="[(2.5 : 1.625); (2.5 : 2.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="42eedcc0-e5b2-4064-bb3d-6650101e7436" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="9451443e-9f86-4d9f-a02c-d7fc4996c3c5" />
+        <SubsystemShapeMoniker Id="38cec43a-21a2-4aa4-89b3-0d72b0af9c4c" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <SubsystemShape Id="cbba1557-6666-4bb0-aa4c-cfa96b0c3c7d" absoluteBounds="1.75, 4.25, 1.5, 1.375" customColor="White">
+      <subsystemMoniker Id="5837bb4a-9fcd-447e-b55d-48b388676c6e" LastKnownName="Queue System" />
+    </SubsystemShape>
+    <useCaseDependencyConnector edgePoints="[(2.5 : 3.5); (2.5 : 4.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="257e4c83-453e-4f6c-b2be-651625de3bee" />
+      <relativeChildShapes />
+      <nodes>
+        <SubsystemShapeMoniker Id="38cec43a-21a2-4aa4-89b3-0d72b0af9c4c" />
+        <SubsystemShapeMoniker Id="cbba1557-6666-4bb0-aa4c-cfa96b0c3c7d" />
+      </nodes>
+    </useCaseDependencyConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

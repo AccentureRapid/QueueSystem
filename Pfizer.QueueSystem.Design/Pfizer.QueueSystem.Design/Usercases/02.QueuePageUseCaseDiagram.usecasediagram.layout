@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QueuePageUseCaseDiagram">
+  <useCaseModelRootMoniker Id="5809245d-49c0-4794-91e1-c8dae7e25607" />
+  <nestedChildShapes>
+    <actorShape Id="c3cb3005-2dfa-4b84-8b6d-ae89442b86df" absoluteBounds="2.25, 0.875, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="dbe46a64-150d-42c7-ad03-e7dcaa297131" LastKnownName="Actor2" />
+      <relativeChildShapes />
+    </actorShape>
+    <commentShape Id="06b398bc-94e2-477f-867f-9ed421dbbdda" absoluteBounds="4, 0.875, 3.5, 5.125" customColor="251, 247, 200">
+      <commentMoniker Id="b308b823-f756-40f1-b28b-bc5e4afa8746" />
+      <relativeChildShapes />
+    </commentShape>
+    <SubsystemShape Id="583391cc-21f8-46c9-8a1d-6f46adbc2494" absoluteBounds="1.625, 2, 1.625, 1.375" customColor="White">
+      <subsystemMoniker Id="82277d4f-cc7b-4f4b-b432-bf48afd3e589" LastKnownName="Queue System" />
+    </SubsystemShape>
+    <useCaseDependencyConnector edgePoints="[(2.49 : 1.375); (2.465 : 2)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="1bad6c8f-b359-4333-984b-4b0c97626035" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="c3cb3005-2dfa-4b84-8b6d-ae89442b86df" />
+        <SubsystemShapeMoniker Id="583391cc-21f8-46c9-8a1d-6f46adbc2494" />
+      </nodes>
+    </useCaseDependencyConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

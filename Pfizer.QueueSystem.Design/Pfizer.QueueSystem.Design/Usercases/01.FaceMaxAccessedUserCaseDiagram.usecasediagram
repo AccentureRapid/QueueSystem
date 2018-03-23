@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="7459c5f2-509c-4420-b933-fa494c0b3afe" name="FaceMaxAccessedUserCaseDiagram" linkedPackageId="3e31fad5-7067-4658-8398-6b2c08332cde" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="3cd005c6-f49f-4dab-95c7-f96e0b632602">
+      <elementDefinition Id="95559b3f-a695-4a85-82e6-e24bda76ebd2" />
+      <body>1.when face user access Face system, face system will invoke Queue System's web api (CanAccessSystem()) , if true, the user could access the face system, if false, then the browser will redirect to Queue system. (queue?ntid=admin&amp;returnUrl=www.baidu.com)</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="c504e683-3613-49a5-8b8e-8b0c823ebd46">
+      <profileInstance Id="e21a9c2e-285a-46dc-8a2d-e681b6119f3c" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="53e00027-f44c-48c4-bd1d-3e257974edd7">
+      <profileInstance Id="7b28e7ca-606b-420e-b1b7-ccf98129a1f1" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="0937294a-ab95-4dc6-be5d-017f60d3ae94" name="Actor1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2326adfe-b146-4376-9096-d0b0abaa1c99" />
+        <suppliersInternal>
+          <dependency Id="42eedcc0-e5b2-4064-bb3d-6650101e7436">
+            <subsystemMoniker Id="72915df2-a9dc-4294-9024-9f15455712bc" LastKnownName="Face System" />
+            <elementDefinition Id="ca4a1bec-7b9a-41e4-86d6-40836f48641c" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="72915df2-a9dc-4294-9024-9f15455712bc" name="Face System" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="92f8b745-d619-40fe-ad24-542da7baa5ef" />
+        <suppliersInternal>
+          <dependency Id="257e4c83-453e-4f6c-b2be-651625de3bee">
+            <subsystemMoniker Id="5837bb4a-9fcd-447e-b55d-48b388676c6e" LastKnownName="Queue System" />
+            <elementDefinition Id="9cee3daf-8757-46ac-961d-83de99a1547e" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="5837bb4a-9fcd-447e-b55d-48b388676c6e" name="Queue System" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0d21cd97-0041-4165-b4ce-535f9128c422" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="3e31fad5-7067-4658-8398-6b2c08332cde" name="Pfizer.QueueSystem.Design">
+    <elementDefinition Id="d7c6de2f-6c4e-4eeb-a376-b1d1e3c95b0c" />
+  </package>
+</useCaseModelRoot>

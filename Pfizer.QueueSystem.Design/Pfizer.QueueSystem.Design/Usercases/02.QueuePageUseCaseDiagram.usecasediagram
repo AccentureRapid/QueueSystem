@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="5809245d-49c0-4794-91e1-c8dae7e25607" name="QueuePageUseCaseDiagram" linkedPackageId="7e06da05-e9cd-4de3-97b1-62fbe5b7cf69" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="b308b823-f756-40f1-b28b-bc5e4afa8746">
+      <elementDefinition Id="38997c37-64e0-4895-94e2-0b18b36deda5" />
+      <body>1. When face user access Queue System, he must be redirected from face system with two parameters：
+ntid and returnUrl
+example: http://localhost:8085/QueueSystem/queue?ntid=admin&amp;returnUrl=www.faceurl.com
+
+if no parameter provided, system should redirect error page: 为提供系统参数, 您将不能进入排队系统。
+
+2. When face user could stay current page, user should see how many users before him.
+
+3. When face user could stay current page, user should see predicted time.
+
+
+___________________________________________
+
+Fast token:
+
+1. When face user could stay current page, user could see all the time span to be allowed to select for fast token.
+
+2. When face user could stay current page, user could click 领取 button to take the token, system will store the token： ntid, start time, end time,created on</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="dbb51ad3-6dc0-4200-98c7-c78ba2e177f6">
+      <profileInstance Id="97bd6702-f27b-4e7b-a8e8-1970e2b5ff9e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8ce1c127-84cd-42e2-b3e6-f4247d61e85b">
+      <profileInstance Id="96be70db-0893-400b-8112-25c583032ae1" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="dbe46a64-150d-42c7-ad03-e7dcaa297131" name="Actor2" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="49d6a728-e1e1-4064-9679-880aac869ef0" />
+        <suppliersInternal>
+          <dependency Id="1bad6c8f-b359-4333-984b-4b0c97626035">
+            <subsystemMoniker Id="82277d4f-cc7b-4f4b-b432-bf48afd3e589" LastKnownName="Queue System" />
+            <elementDefinition Id="47bd9556-765c-47a4-aa57-c640e8a2f57d" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="82277d4f-cc7b-4f4b-b432-bf48afd3e589" name="Queue System" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4e30bdec-cf95-4669-b4a6-303f78ef161d" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="7e06da05-e9cd-4de3-97b1-62fbe5b7cf69" name="Pfizer.QueueSystem.Design">
+    <elementDefinition Id="d7c6de2f-6c4e-4eeb-a376-b1d1e3c95b0c" />
+  </package>
+</useCaseModelRoot>

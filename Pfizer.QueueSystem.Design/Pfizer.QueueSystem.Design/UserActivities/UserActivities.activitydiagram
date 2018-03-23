@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="7ccd8fea-49cb-42df-8417-2a8e7bf37085" name="UserActivities" linkedPackageId="0dc3e115-3bf5-4fbb-a3ed-57c4977a9efa" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="5aa743c1-30e9-47bc-a76d-d0359de73b55">
+      <elementDefinition Id="4d49d9d0-252d-4140-bd00-41a8e2d7fc15" />
+      <body>1. Face system invoke the api CanAccessSystem()
+
+if true , go to face system.
+if false,  go to queue system</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="7b0231c4-d766-4540-98c4-06239506aad1" LastKnownName="Decision1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="fc47d9d6-967d-422b-a01f-17ccce22005a">
+      <elementDefinition Id="f31b0790-97a4-498a-aacd-971367cd59ad" />
+      <body>1. Queue page will check below information:
+
+if total count of how many users before him ==0
+if total online users for face is less than the configured max count
+
+then queue system will rediret to the face system.</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="c73a0097-14e3-4c5f-89c3-e27c2f0c6eb9" LastKnownName="Decision2" />
+      </annotatedElements>
+    </comment>
+    <comment Id="8f27205c-6874-4c20-82d2-41f4871173e6">
+      <elementDefinition Id="ae08e1a6-7364-4b59-a829-79c97013f6f9" />
+      <body>1. User click 领取 button to generate an fast token data stored in database.
+2. It will be used in the web api CanAccessSystem(), first check if in the fast token storage, and now is between the time span, directly use face system, else go to queue system.</body>
+      <annotatedElements>
+        <objectNodeMoniker Id="8b66f8b8-2c4f-4735-9c73-c2dee00a6f7d" LastKnownName="Fast Token" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="08f751e8-e359-44ef-96ea-cc260bb92db5">
+      <profileInstance Id="fcade156-69cd-474b-b587-766f9946d31c" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8404816a-a4f3-4a39-be86-b0fc8cca796f">
+      <profileInstance Id="564f79a6-8280-4d39-957d-15271f84284a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="f5031f36-ac71-44a0-bb88-bc412eb81371" name="UserActivities" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="1fa122d0-9c2e-447e-85a0-9b0f59705b97" />
+        <nodes>
+          <initialNode Id="cb537785-4942-47f8-b6d8-927a89dc8478" name="Initial1" isLeaf="false">
+            <elementDefinition Id="6d08dfa9-8f48-43d8-98e7-868ad5c23caf" />
+            <objectFlowTargets>
+              <objectFlow Id="e0e20e3c-2269-4694-b251-ca6ec56af907" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="f7cabb95-f1d3-405f-b120-c0a6802b62e5" LastKnownName="Face system" />
+                <elementDefinition Id="c73f4c6b-7395-4b2a-ac28-93e120fe7cbc" />
+              </objectFlow>
+            </objectFlowTargets>
+          </initialNode>
+          <objectNode Id="f7cabb95-f1d3-405f-b120-c0a6802b62e5" name="Face system" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="a8a0abb4-eede-49ee-a4f7-477e11cb26d4" />
+            <objectFlowTargets>
+              <objectFlow Id="a9fb512b-c305-4d99-8f94-6c01e85c333f" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <decisionNodeMoniker Id="7b0231c4-d766-4540-98c4-06239506aad1" LastKnownName="Decision1" />
+                <elementDefinition Id="af4412f7-9748-4b92-aef4-b91178fbce2d" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="e8667ab9-79ac-441d-8c56-adea7e7411b0" name="2147483647" value="2147483647">
+                <elementDefinition Id="fa4e885c-d2f9-4a04-8ea1-6ddcec1d8210" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <decisionNode Id="7b0231c4-d766-4540-98c4-06239506aad1" name="Decision1" isLeaf="false">
+            <elementDefinition Id="5af736a7-0700-460e-b803-ffd82c4326bd" />
+            <objectFlowTargets>
+              <objectFlow Id="3b927e39-894d-4d60-be29-c22e7b13e17b" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="f7cabb95-f1d3-405f-b120-c0a6802b62e5" LastKnownName="Face system" />
+                <elementDefinition Id="5d99d2c5-087c-4cbd-a7fd-1c13ffc7aef1" />
+              </objectFlow>
+              <objectFlow Id="8b569b99-9c69-4e85-a938-741a1c846fc7" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="b77cbfef-5d05-472e-82af-5e4bbcea615b" LastKnownName="Queue System" />
+                <elementDefinition Id="a4a32169-c389-43ec-b383-6de516142ac4" />
+              </objectFlow>
+            </objectFlowTargets>
+          </decisionNode>
+          <objectNode Id="b77cbfef-5d05-472e-82af-5e4bbcea615b" name="Queue System" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="229e8926-f797-4308-98f6-959d97a358cf" />
+            <objectFlowTargets>
+              <objectFlow Id="c6cf7ce9-911c-4d05-a42d-efbc2a5d0768" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="a581880a-f7ac-466c-ba2b-9ad1117d4ea2" LastKnownName="Queue Page" />
+                <elementDefinition Id="161231f5-3f7a-402f-99ff-09c8f1607fcf" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="1b02233d-969d-44b5-b1d5-f0ce8b1f3fdb" name="2147483647" value="2147483647">
+                <elementDefinition Id="23cd5ad8-f399-4ee3-bdf7-f901c8774fd1" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="a581880a-f7ac-466c-ba2b-9ad1117d4ea2" name="Queue Page" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="884de4b2-3a83-4a9b-bf36-596e83e61ac5" />
+            <objectFlowTargets>
+              <objectFlow Id="f01a4745-a3e8-4215-98de-6537cf2dea1c" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <decisionNodeMoniker Id="c73a0097-14e3-4c5f-89c3-e27c2f0c6eb9" LastKnownName="Decision2" />
+                <elementDefinition Id="fd56d90f-a84e-4d49-94be-016f86f42d07" />
+              </objectFlow>
+              <objectFlow Id="dd3fecfe-92c8-429e-a6cb-be4fb319f839" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="8b66f8b8-2c4f-4735-9c73-c2dee00a6f7d" LastKnownName="Fast Token" />
+                <elementDefinition Id="ade70ff2-0f81-44e1-8cce-08ac10decd1a" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="989aa4f7-419b-454f-8a73-67213fabfc38" name="2147483647" value="2147483647">
+                <elementDefinition Id="f5e6d9cd-f306-4e46-9c5f-847f2446227a" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <decisionNode Id="c73a0097-14e3-4c5f-89c3-e27c2f0c6eb9" name="Decision2" isLeaf="false">
+            <elementDefinition Id="e228438c-2cdc-4efe-8a99-d26dfede6e22" />
+            <objectFlowTargets>
+              <objectFlow Id="20b2d14a-c275-4798-a9ac-068ccfa83d49" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="f7cabb95-f1d3-405f-b120-c0a6802b62e5" LastKnownName="Face system" />
+                <elementDefinition Id="3a73ed68-2960-486c-9492-52d9520f527b" />
+              </objectFlow>
+              <objectFlow Id="aea4e3f3-30c8-4d15-9778-8ffb5c7c17df" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="a581880a-f7ac-466c-ba2b-9ad1117d4ea2" LastKnownName="Queue Page" />
+                <elementDefinition Id="95750ea6-1be0-4230-978f-dee3553d23fd" />
+              </objectFlow>
+            </objectFlowTargets>
+          </decisionNode>
+          <objectNode Id="8b66f8b8-2c4f-4735-9c73-c2dee00a6f7d" name="Fast Token" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="0f104c22-8e09-434f-9028-59443883ac2e" />
+            <upperBound>
+              <literalInteger Id="28c4f836-292b-453b-a02b-bea0072b1a41" name="2147483647" value="2147483647">
+                <elementDefinition Id="96938d99-8f41-46f1-bf55-4c706132b798" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="0dc3e115-3bf5-4fbb-a3ed-57c4977a9efa" name="Pfizer.QueueSystem.Design">
+    <elementDefinition Id="d7c6de2f-6c4e-4eeb-a376-b1d1e3c95b0c" />
+  </package>
+</activityRootModel>
