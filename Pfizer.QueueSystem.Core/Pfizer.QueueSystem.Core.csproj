@@ -195,6 +195,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\FaceDeviceLog\RequestTableForFace.cs" />
+    <Compile Include="Entities\FastToken.cs" />
     <Compile Include="Entities\QueueHistory.cs" />
     <Compile Include="FaceDeviceLogDbContext.cs" />
     <Compile Include="QueueSystemConsts.cs" />

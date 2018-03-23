@@ -13,6 +13,7 @@ namespace Pfizer.QueueSystem.EntityFramework
     {
         //TODO: Define an IDbSet for your Entities...
         public DbSet<QueueHistory> QueueHistory { get; set; }
+        public DbSet<FastToken> FastToken { get; set; }
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
