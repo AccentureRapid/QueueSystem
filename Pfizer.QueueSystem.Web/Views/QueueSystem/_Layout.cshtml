@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="~/favicon.ico">
 
     <title>Pfizer Queue System</title>
-
+    @Styles.Render("~/Bundles/queue-vendor/css")
     @Styles.Render("~/Bundles/queue/css")
 
     <!-- View specific styles -->
@@ -49,8 +49,7 @@
         </div>
 
     </div>
-
-    @Scripts.Render("~/Bundles/queue/js/bottom")
+    @Scripts.Render("~/Bundles/queue-vendor/js/bottom")
 
     <script>
         //Localizing momentjs

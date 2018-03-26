@@ -13,5 +13,7 @@ namespace Pfizer.QueueSystem.Services
         Task<int> GetOnlineCustomersCount();
 
         Task<bool> CanAccessSystem();
+
+        Task<List<TimeSpanDto>> GetTimeSpanCollection();
     }
 }
