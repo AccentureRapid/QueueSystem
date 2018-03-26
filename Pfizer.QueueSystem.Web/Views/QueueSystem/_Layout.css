@@ -6,7 +6,7 @@
   display: inline-block;
 }
 .queue-information-container {
-    height: 200px;
+    height: 300px;
     text-align: center;
 }
 .fast-token-container {
@@ -16,4 +16,7 @@
 
 .fast-token-container p{
     font-size:large;
+}
+.dropdown-menu {
+    margin-top:20px;
 }
