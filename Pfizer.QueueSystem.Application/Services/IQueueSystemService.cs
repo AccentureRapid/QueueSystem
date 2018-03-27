@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using Pfizer.QueueSystem.Entities;
 using Pfizer.QueueSystem.Services.Dto;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,7 @@ namespace Pfizer.QueueSystem.Services
         Task<bool> CanAccessSystem();
 
         Task<List<TimeSpanDto>> GetTimeSpanCollection();
+
+        Task<FastToken> TakeFastToken(FastTokenDto dto);
     }
 }

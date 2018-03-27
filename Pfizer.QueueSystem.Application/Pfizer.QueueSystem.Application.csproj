@@ -209,6 +209,7 @@
     <Compile Include="Roles\Dto\PermissionDto.cs" />
     <Compile Include="Roles\Dto\RoleDto.cs" />
     <Compile Include="Roles\IRoleAppService.cs" />
+    <Compile Include="Services\Dto\FastTokenDto.cs" />
     <Compile Include="Services\Dto\TimeSpanDto.cs" />
     <Compile Include="Services\Dto\QueueHistoryDto.cs" />
     <Compile Include="Services\IQueueHistoryService.cs" />

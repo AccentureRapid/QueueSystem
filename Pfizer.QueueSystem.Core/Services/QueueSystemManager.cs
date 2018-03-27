@@ -15,6 +15,7 @@ namespace Pfizer.QueueSystem.Services
     public class QueueSystemManager : DomainService, IQueueSystemManager
     {
         private readonly IRepository<QueueHistory> _queueHistoryRepository;
+        private readonly IRepository<FastToken> _fastTokenRepository;
         private readonly IRepository<RequestTableForFace, Guid> _requestTableForFaceRepository;
         private readonly IIocManager _iocManager;
         private FaceDeviceLogDbContext db
@@ -25,10 +26,12 @@ namespace Pfizer.QueueSystem.Services
             }
         }
         public QueueSystemManager(IRepository<QueueHistory> queueHistoryRepository,
+             IRepository<FastToken> fastTokenRepository,
              IRepository<RequestTableForFace, Guid> requestTableForFaceRepository,
             IIocManager iocManager)
         {
             _queueHistoryRepository = queueHistoryRepository;
+            _fastTokenRepository = fastTokenRepository;
             _requestTableForFaceRepository = requestTableForFaceRepository;
             _iocManager = iocManager;
         }
@@ -42,6 +45,16 @@ namespace Pfizer.QueueSystem.Services
                 var list = query.Where(x => x.EndDate >= lastActivityFromUtc).ToList();
                 var count = list.Count();
                 return count;
+            });
+
+            return result;
+        }
+
+        public async Task<FastToken> SaveFastToken(FastToken entity)
+        {
+            var result = await Task.Run(() => {
+                var token = _fastTokenRepository.Insert(entity);
+                return token;
             });
 
             return result;

@@ -15,6 +15,7 @@ namespace Pfizer.QueueSystem.Services
     {
         private readonly IQueueSystemManager _queueSystemManager;
         private readonly IObjectMapper _objectMapper;
+
         public QueueSystemService(IQueueSystemManager queueSystemManager,
             IObjectMapper objectMapper)
         {
@@ -70,7 +71,7 @@ namespace Pfizer.QueueSystem.Services
                     {
                         dto.EndTime = Convert.ToDateTime(string.Format("{0} {1}", startDate, endTime), dtFormat);
                     }
-                    
+
                     data.Add(dto);
                 }
 
@@ -78,6 +79,28 @@ namespace Pfizer.QueueSystem.Services
             });
 
             return result;
+        }
+
+        public async Task<FastToken> TakeFastToken(FastTokenDto dto)
+        {
+            var collection = await this.GetTimeSpanCollection();
+
+            var timespan = collection.Where(x => x.Id == dto.Id).FirstOrDefault();
+            if (timespan != null)
+            {
+                FastToken token = new FastToken
+                {
+                    UserEID = dto.NtId,
+                    StartTime = timespan.StartTime,
+                    EndTime = timespan.EndTime
+                };
+
+                var entity = await _queueSystemManager.SaveFastToken(token);
+
+                return entity;
+            }
+
+            return null;
         }
     }
 }

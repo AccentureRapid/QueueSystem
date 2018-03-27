@@ -11,5 +11,7 @@ namespace Pfizer.QueueSystem.Services
     public interface IQueueSystemManager : IDomainService
     {
         Task<int> GetOnlineCustomersCount(DateTime lastActivityFromUtc);
+
+        Task<FastToken> SaveFastToken(FastToken entity);
     }
 }
