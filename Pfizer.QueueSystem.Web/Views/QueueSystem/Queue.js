@@ -30,6 +30,8 @@
             dto.id = $("#timespan-container option:selected" ).val();
             dto.ntId = getParameterByName('ntid');
 
+            var selectText = $("#timespan-container option:selected").text();
+
             $.ajax({
             url: "../api/services/app/queueSystemService/TakeFastToken",
             // 数据发送方式
@@ -39,8 +41,9 @@
             // 要传递的数据
             data: dto,
             // 回调函数，接受服务器端返回给客户端的值，即result值
-            success: function (data) {
-               console.log('data received: ' + data);
+                success: function (data) {
+                abp.message.info('您已领取快速通行令牌在此时间段：' + selectText + '，在此时间段将享有优先访问。', '提示');
+                console.log('data received: ' + data);
             },
 
             error: function (data) {
