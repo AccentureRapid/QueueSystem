@@ -8,3 +8,9 @@
 .social-icons a.btn-sm {
   margin-right: 5px;
 }
+
+.solid-border{
+    border:solid 1px;
+    border-bottom-color:gray;
+    border-color : gray;
+}
