@@ -16,6 +16,8 @@ namespace Pfizer.QueueSystem.Entities
     public class FastToken : Entity, IHasCreationTime
     {
         public string UserEID { get; set; }
+        public string Date { get; set; }
+        public int TimeSpanId { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public DateTime CreationTime { get; set; }

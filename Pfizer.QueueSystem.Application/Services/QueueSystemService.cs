@@ -81,26 +81,39 @@ namespace Pfizer.QueueSystem.Services
             return result;
         }
 
-        public async Task<FastToken> TakeFastToken(FastTokenDto dto)
+        public async Task<FastTokenResult> TakeFastToken(FastTokenDto dto)
         {
-            var collection = await this.GetTimeSpanCollection();
 
-            var timespan = collection.Where(x => x.Id == dto.Id).FirstOrDefault();
-            if (timespan != null)
+            var fastTokenResult = new FastTokenResult();
+
+            //1. Check UserFastToken is exists or not in the same time span.
+            var exists = await _queueSystemManager.Exists(dto.NtId, dto.Id);
+
+            fastTokenResult.Exists = exists;
+
+            if (!fastTokenResult.Exists)
             {
-                FastToken token = new FastToken
+
+                var collection = await this.GetTimeSpanCollection();
+
+                var timespan = collection.Where(x => x.Id == dto.Id).FirstOrDefault();
+                if (timespan != null)
                 {
-                    UserEID = dto.NtId,
-                    StartTime = timespan.StartTime,
-                    EndTime = timespan.EndTime
-                };
+                    FastToken token = new FastToken
+                    {
+                        UserEID = dto.NtId,
+                        Date = DateTime.Now.Date.ToString("yyyyMMdd"),
+                        TimeSpanId = timespan.Id,
+                        StartTime = timespan.StartTime,
+                        EndTime = timespan.EndTime
+                    };
+                    var entity = await _queueSystemManager.SaveFastToken(token);
 
-                var entity = await _queueSystemManager.SaveFastToken(token);
+                    fastTokenResult.FastToken = entity;
 
-                return entity;
+                }
             }
-
-            return null;
+            return fastTokenResult;
         }
     }
 }

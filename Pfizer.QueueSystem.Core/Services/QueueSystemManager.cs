@@ -59,5 +59,26 @@ namespace Pfizer.QueueSystem.Services
 
             return result;
         }
+
+
+        public async Task<bool> Exists(string userId, int timeSpanId)
+        {
+            var result = await Task.Run(() => {
+                //TODO add two column: 1 date 2 id in the timespan collection
+                var date = DateTime.Now.Date.ToString("yyyyMMdd");
+                var count = _fastTokenRepository.Count(x => x.UserEID == userId 
+                            && x.Date == date && x.TimeSpanId == timeSpanId );
+
+                if (count > 0)
+                    return true;
+                else
+                    return false;
+
+            });
+
+           
+            return result;
+        }
+
     }
 }

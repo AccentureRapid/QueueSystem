@@ -13,5 +13,8 @@ namespace Pfizer.QueueSystem.Services
         Task<int> GetOnlineCustomersCount(DateTime lastActivityFromUtc);
 
         Task<FastToken> SaveFastToken(FastToken entity);
+
+        Task<bool> Exists(string userId, int timeSpanId);
+
     }
 }

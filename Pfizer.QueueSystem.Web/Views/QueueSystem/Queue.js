@@ -42,9 +42,16 @@
             data: dto,
             // 回调函数，接受服务器端返回给客户端的值，即result值
                 success: function (data) {
-                abp.message.info('您已领取快速通行令牌在此时间段：' + selectText + '，在此时间段将享有优先访问。', '提示');
-                console.log('data received: ' + data);
-            },
+                    if (data.result.exists)
+                    {
+                        abp.message.warn('您在此时间段：' + selectText + '，已领取过快速通行令牌，无需重复申领。', '警告');
+                    }
+                    else
+                    {
+                        abp.message.info('您已领取快速通行令牌在此时间段：' + selectText + '，在此时间段将享有优先访问。', '提示');
+                     }
+                    console.log('data received: ' + data);
+                },
 
             error: function (data) {
                 console.log('data: ' + data);
