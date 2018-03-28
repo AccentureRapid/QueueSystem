@@ -7358,3 +7358,75 @@ DEBUG 2018-03-28 14:33:26,133 [63   ] Abp.Web.SignalR.Hubs.AbpCommonHub        -
 DEBUG 2018-03-28 14:33:26,133 [63   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: daae8183-b78e-4296-8659-300518eab94b
 DEBUG 2018-03-28 14:33:27,086 [94   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"75a9f694-9ae0-48a0-badc-6674a0a28d1d","IpAddress":"10.202.189.139","TenantId":null,"UserId":1,"ConnectTime":"2018-03-28T14:33:27.0861438+08:00","Properties":{}}
 DEBUG 2018-03-28 14:33:27,086 [94   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 75a9f694-9ae0-48a0-badc-6674a0a28d1d
+DEBUG 2018-03-28 17:25:06,252 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-28 17:25:06,288 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-03-28 17:25:06,302 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.Web.QueueSystemWebModule, Pfizer.QueueSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemDataModule, Pfizer.QueueSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,309 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,310 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,310 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemCoreModule, Pfizer.QueueSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,311 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemApplicationModule, Pfizer.QueueSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,311 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,312 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.Api.QueueSystemWebApiModule, Pfizer.QueueSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,312 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,312 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,313 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,313 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,313 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:06,318 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-03-28 17:25:06,723 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-28 17:25:06,723 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-28 17:25:06,724 [1    ] o.Configuration.LanguageManagementConfig - Converted QueueSystem (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-28 17:25:06,724 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-28 17:25:07,484 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Pfizer.QueueSystem.EntityFramework.QueueSystemDbContext, Pfizer.QueueSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:07,565 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Pfizer.QueueSystem.EntityFramework.FaceDeviceLogDbContext, Pfizer.QueueSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-28 17:25:09,850 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-03-28 17:25:09,863 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-28 17:25:09,877 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-03-28 17:25:09,880 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: QueueSystem
+DEBUG 2018-03-28 17:25:09,882 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-28 17:25:09,989 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-28 17:25:10,075 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-03-28 17:25:10,075 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-03-28 17:25:10,084 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-03-28 17:25:10,085 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.CreateUserDto
+DEBUG 2018-03-28 17:25:10,086 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.UpdateUserDto
+DEBUG 2018-03-28 17:25:10,086 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.UserDto
+DEBUG 2018-03-28 17:25:10,086 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Services.Dto.QueueHistoryDto
+DEBUG 2018-03-28 17:25:10,086 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.CreateRoleDto
+DEBUG 2018-03-28 17:25:10,086 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.PermissionDto
+DEBUG 2018-03-28 17:25:10,086 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.RoleDto
+DEBUG 2018-03-28 17:25:10,087 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-03-28 17:25:10,087 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-03-28 17:25:10,087 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.TenantDto
+DEBUG 2018-03-28 17:25:10,087 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-03-28 17:25:10,087 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-03-28 17:25:12,369 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-03-28 17:25:12,371 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-03-28 17:25:12,373 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Services.IQueueHistoryService' with service name 'app/queueHistoryService'.
+DEBUG 2018-03-28 17:25:12,376 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Services.IQueueSystemService' with service name 'app/queueSystemService'.
+DEBUG 2018-03-28 17:25:12,378 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-03-28 17:25:12,380 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-03-28 17:25:12,383 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-03-28 17:25:12,388 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-03-28 17:25:29,987 [26   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"75a9f694-9ae0-48a0-badc-6674a0a28d1d","IpAddress":null,"TenantId":null,"UserId":1,"ConnectTime":"2018-03-28T17:25:29.806737+08:00","Properties":{}}
+DEBUG 2018-03-28 17:25:31,568 [96   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"6476faa0-af11-472a-a6eb-99ef27c6d14a","IpAddress":"10.202.189.139","TenantId":null,"UserId":1,"ConnectTime":"2018-03-28T17:25:31.5689872+08:00","Properties":{}}
+DEBUG 2018-03-28 17:25:31,659 [96   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 6476faa0-af11-472a-a6eb-99ef27c6d14a
+DEBUG 2018-03-28 17:25:43,957 [26   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e9dbd4f9-7ce5-4b43-8e1f-83b1e820ffbf","IpAddress":"10.202.189.139","TenantId":null,"UserId":1,"ConnectTime":"2018-03-28T17:25:43.9578933+08:00","Properties":{}}
+DEBUG 2018-03-28 17:25:43,957 [26   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: e9dbd4f9-7ce5-4b43-8e1f-83b1e820ffbf
+DEBUG 2018-03-28 17:25:44,195 [26   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e9dbd4f9-7ce5-4b43-8e1f-83b1e820ffbf
+DEBUG 2018-03-28 17:26:09,509 [42   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 75a9f694-9ae0-48a0-badc-6674a0a28d1d
+DEBUG 2018-03-28 17:26:29,954 [91   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is reconnected: {"ConnectionId":"e9dbd4f9-7ce5-4b43-8e1f-83b1e820ffbf","IpAddress":"10.202.189.139","TenantId":null,"UserId":1,"ConnectTime":"2018-03-28T17:25:43.9578933+08:00","Properties":{}}
+DEBUG 2018-03-28 17:26:29,985 [42   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: e9dbd4f9-7ce5-4b43-8e1f-83b1e820ffbf
+DEBUG 2018-03-28 17:26:33,073 [26   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is reconnected: {"ConnectionId":"6476faa0-af11-472a-a6eb-99ef27c6d14a","IpAddress":"10.202.189.139","TenantId":null,"UserId":1,"ConnectTime":"2018-03-28T17:25:31.5689872+08:00","Properties":{}}
+DEBUG 2018-03-28 17:28:06,222 [96   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e9dbd4f9-7ce5-4b43-8e1f-83b1e820ffbf
+DEBUG 2018-03-28 17:28:13,570 [96   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: e9dbd4f9-7ce5-4b43-8e1f-83b1e820ffbf
+DEBUG 2018-03-28 17:28:13,885 [91   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"aa08bb6c-d852-429f-ab64-b4ca52ea74d4","IpAddress":"10.202.189.139","TenantId":null,"UserId":1,"ConnectTime":"2018-03-28T17:28:13.885524+08:00","Properties":{}}
+DEBUG 2018-03-28 17:28:13,886 [91   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: aa08bb6c-d852-429f-ab64-b4ca52ea74d4
+DEBUG 2018-03-28 17:28:13,914 [91   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: aa08bb6c-d852-429f-ab64-b4ca52ea74d4
+DEBUG 2018-03-28 17:29:55,189 [96   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: aa08bb6c-d852-429f-ab64-b4ca52ea74d4
+DEBUG 2018-03-28 17:29:58,136 [96   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: aa08bb6c-d852-429f-ab64-b4ca52ea74d4

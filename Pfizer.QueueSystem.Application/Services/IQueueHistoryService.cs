@@ -13,5 +13,6 @@ namespace Pfizer.QueueSystem.Services
         Task SaveQueueHistory(QueueHistoryDto history);
 
         Task<int> GetQueueHistoryCount();
+        Task RemoveQueueHistory(string connectionId);
     }
 }

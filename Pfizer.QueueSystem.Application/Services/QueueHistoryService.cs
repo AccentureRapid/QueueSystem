@@ -31,5 +31,10 @@ namespace Pfizer.QueueSystem.Services
             var entity = _objectMapper.Map<QueueHistory>(input);
             await _queueHistoryManager.SaveQueueHistory(entity);
         }
+
+        public async Task RemoveQueueHistory(string connectionId)
+        {
+            await _queueHistoryManager.RemoveQueueHistory(connectionId);
+        }
     }
 }

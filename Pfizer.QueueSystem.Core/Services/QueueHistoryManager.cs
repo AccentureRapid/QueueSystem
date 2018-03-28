@@ -30,5 +30,10 @@ namespace Pfizer.QueueSystem.Services
            var id = await _queueHistoryRepository.InsertAndGetIdAsync(history);
            return id;
         }
+
+        public async Task RemoveQueueHistory(string connectionId)
+        {
+            await _queueHistoryRepository.DeleteAsync(x => x.ConnectionId == connectionId);
+        }
     }
 }

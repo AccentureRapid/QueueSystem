@@ -56,6 +56,7 @@ public class QueueHistoryHub : Hub, ISingletonDependency
     public async override Task OnDisconnected(bool stopCalled)
     {
         await base.OnDisconnected(stopCalled);
+        await _queueHistoryService.RemoveQueueHistory(Context.ConnectionId);
         Logger.Debug("A client disconnected from QueueHistoryHub: " + Context.ConnectionId);
     }
 }
