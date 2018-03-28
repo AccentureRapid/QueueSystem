@@ -69,6 +69,18 @@
 
         });
 
+
+
+         var queueHistoryHub = $.connection.queueHistoryHub; // Get a reference to the hub
+
+         queueHistoryHub.client.getMessage = function (message) { // Register for incoming messages
+         console.log('received message: ' + message);
+        };
+
+         abp.event.on('abp.signalr.connected', function () { // Register to connect event
+         queueHistoryHub.server.sendMessage("Hi everybody, I'm connected to the queue system signal server!"); // Send a message to the server
+    });
+
     });
 
 

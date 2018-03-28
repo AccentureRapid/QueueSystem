@@ -1,7 +1,10 @@
 ﻿@using System.Threading
 @using System.Web.Optimization
+@using Abp.Configuration
 @using Abp.Timing
+@using Abp.Web.Mvc.Extensions
 @using Pfizer.QueueSystem
+@using Pfizer.QueueSystem.Configuration
 @using Pfizer.QueueSystem.Web.Helpers
 @{
     SetAntiForgeryCookie();
@@ -59,6 +62,10 @@
     <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
     <script src="~/api/AbpServiceProxies/GetAll?v=@(Clock.Now.Ticks)"></script>
     <script src="~/AbpScripts/GetScripts?v=@(Clock.Now.Ticks)" type="text/javascript"></script>
+
+    <!-- SignalR scripts -->
+    <script src="~/signalr/hubs"></script>
+    @Html.IncludeScript("~/Abp/Framework/scripts/libs/abp.signalr.js")
 
     <!-- View specific scripts -->
     @RenderSection("scripts", required: false)
