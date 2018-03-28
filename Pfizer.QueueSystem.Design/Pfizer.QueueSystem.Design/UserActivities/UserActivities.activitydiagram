@@ -13,7 +13,11 @@ if false,  go to queue system</body>
     </comment>
     <comment Id="fc47d9d6-967d-422b-a01f-17ccce22005a">
       <elementDefinition Id="f31b0790-97a4-498a-aacd-971367cd59ad" />
-      <body>1. Queue page will check below information:
+      <body>1. Queue the user to the queue.
+Client side invoke signalR to queue the user info with connectionId.
+
+
+2. Queue page will check below information:
 
 if total count of how many users before him ==0
 if total online users for face is less than the configured max count
@@ -32,20 +36,6 @@ then queue system will rediret to the face system.</body>
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="08f751e8-e359-44ef-96ea-cc260bb92db5">
-      <profileInstance Id="fcade156-69cd-474b-b587-766f9946d31c" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="8404816a-a4f3-4a39-be86-b0fc8cca796f">
-      <profileInstance Id="564f79a6-8280-4d39-957d-15271f84284a" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="f5031f36-ac71-44a0-bb88-bc412eb81371" name="UserActivities" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -146,5 +136,19 @@ then queue system will rediret to the face system.</body>
   </packagedElements>
   <package Id="0dc3e115-3bf5-4fbb-a3ed-57c4977a9efa" name="Pfizer.QueueSystem.Design">
     <elementDefinition Id="d7c6de2f-6c4e-4eeb-a376-b1d1e3c95b0c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="08f751e8-e359-44ef-96ea-cc260bb92db5">
+        <profileInstance Id="fcade156-69cd-474b-b587-766f9946d31c" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="8404816a-a4f3-4a39-be86-b0fc8cca796f">
+        <profileInstance Id="564f79a6-8280-4d39-957d-15271f84284a" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </activityRootModel>

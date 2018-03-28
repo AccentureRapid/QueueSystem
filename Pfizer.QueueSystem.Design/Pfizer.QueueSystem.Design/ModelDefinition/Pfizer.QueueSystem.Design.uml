@@ -44,7 +44,11 @@ if false,  go to queue system</body>
     </comment>
     <comment
       Id="f31b0790-97a4-498a-aacd-971367cd59ad">
-      <body>1. Queue page will check below information:
+      <body>1. Queue the user to the queue.
+Client side invoke signalR to queue the user info with connectionId.
+
+
+2. Queue page will check below information:
 
 if total count of how many users before him ==0
 if total online users for face is less than the configured max count
