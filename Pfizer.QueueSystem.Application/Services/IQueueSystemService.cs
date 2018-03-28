@@ -18,5 +18,7 @@ namespace Pfizer.QueueSystem.Services
         Task<List<TimeSpanDto>> GetTimeSpanCollection();
 
         Task<FastTokenResult> TakeFastToken(FastTokenDto dto);
+
+        Task<RefreshQueueInformationDto> GetQueueInfomation(ConnectionDto dto);
     }
 }

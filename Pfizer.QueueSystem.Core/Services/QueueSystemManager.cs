@@ -80,5 +80,21 @@ namespace Pfizer.QueueSystem.Services
             return result;
         }
 
+        public async Task<int> GetTotalUsersCountBeforeMe(string connectionId)
+        {
+            var result = await Task.Run(() => {
+                var queueHistory = _queueHistoryRepository.GetAll().Where(x => x.ConnectionId == connectionId).ToList().FirstOrDefault();
+                if (queueHistory != null)
+                {
+                    var count = _queueHistoryRepository.Count(x => x.CreationTime < queueHistory.CreationTime);
+                    return count;
+                }
+                return 0;
+            });
+
+
+            return result;
+            
+        }
     }
 }
