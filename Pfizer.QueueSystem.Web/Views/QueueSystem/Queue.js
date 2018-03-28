@@ -44,11 +44,11 @@
                 success: function (data) {
                     if (data.result.exists)
                     {
-                        abp.message.warn('您在此时间段：' + selectText + '，已领取过快速通行令牌，无需重复申领。', '警告');
+                        abp.message.warn('领取失败，您在此时间段：' + selectText + '，已领取过快速通行令牌。');
                     }
                     else
                     {
-                        abp.message.info('您已领取快速通行令牌在此时间段：' + selectText + '，在此时间段将享有优先访问。', '提示');
+                        abp.message.info('领取成功，快速通行令牌：' + selectText + '，在此时间段将享有优先访问。');
                      }
                     console.log('data received: ' + data);
                 },
