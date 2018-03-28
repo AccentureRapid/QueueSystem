@@ -29,17 +29,14 @@ namespace Pfizer.QueueSystem.Web
             _bus.SubscribeAsync<ClientQueueMessage>("NewClientQueuedMessage", message
                 => System.Threading.Tasks.Task.Factory.StartNew(() =>
                 {
-                    var userEID = message.UserEID;
-                    var userName = message.UserName;
                     // Save the queue message to data storage, like sql server etc
 
                     _queueHistoryService.SaveQueueHistory(new Services.Dto.QueueHistoryDto
                     {
-                        UserEID = userEID,
-                        UserName = userName
+                        UserEID = message.UserEID,
+                        UserName = message.UserName,
+                        ConnectionId = message.ConnectionId
                     });
-
-                    Debug.WriteLine(string.Format("Hello : {0} with {1}, you are in the queue now.", userEID, userName));
 
                 }).ContinueWith(task =>
                 {

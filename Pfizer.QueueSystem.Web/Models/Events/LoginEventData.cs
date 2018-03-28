@@ -8,7 +8,9 @@ namespace Pfizer.QueueSystem.Web.Models.Events
 {
     public class LoginEventData: EventData
     {
+        public string UserEID { get; set; }
         public string UserName { get; set; }
+        public string ConnectionId { get; set; }
 
     }
 }

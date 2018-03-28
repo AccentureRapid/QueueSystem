@@ -13,5 +13,7 @@ namespace Pfizer.QueueSystem.Services.Dto
     {
         public string UserEID { get; set; }
         public string UserName { get; set; }
+
+        public string ConnectionId { get; set; }
     }
 }
