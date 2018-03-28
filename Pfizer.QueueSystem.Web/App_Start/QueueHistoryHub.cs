@@ -29,28 +29,27 @@ public class QueueHistoryHub : Hub, ISingletonDependency
         Logger = NullLogger.Instance;
     }
 
-    public async Task SendMessage(string message)
+    public async Task Queue(string ntid)
     {
+        var userId = ntid;
+        var connectionId = Context.ConnectionId;
+        var userName = userId;
+
+        _eventBus.Trigger(new LoginEventData
+        {
+            UserEID = userId,
+            UserName = userName,
+            ConnectionId = connectionId
+        });
         var count = await _queueHistoryService.GetQueueHistoryCount();
-        Clients.All.getMessage(string.Format("User {0}, currently there are {1} users in the queue. Message from client {2}", AbpSession.UserId, count, message));
+        Clients.All.getMessage(string.Format("User {0}, currently there are {1} users in the queue. Message from client {2}", AbpSession.UserId, count, ntid));
     }
 
     public async override Task OnConnected()
     {
         await base.OnConnected();
-        //TODO get the EID from querystring, then get the count in front of me by eid
-        var userId = Context.QueryString["ntid"];
-        var connectionId = Context.ConnectionId;
-        var userName = userId;
-
-        _eventBus.Trigger(new LoginEventData {
-            UserEID = userId,
-            UserName = userName,
-            ConnectionId = connectionId
-        });
-
-        var count = await _queueHistoryService.GetQueueHistoryCount();
-        Clients.Client(Context.ConnectionId).getMessage(string.Format("There are {0} in front of me.", count));
+        
+        Clients.Client(Context.ConnectionId).getMessage(string.Format("Welcome you are here."));
         Logger.Debug("A client connected to QueueHistoryHub: " + Context.ConnectionId);
     }
 
