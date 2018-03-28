@@ -48,7 +48,7 @@
                     }
                     else
                     {
-                        abp.message.info('领取成功，快速通行令牌：' + selectText + '，在此时间段将享有优先访问。');
+                        abp.message.success('领取成功，快速通行令牌：' + selectText + '，在此时间段将享有优先访问。');
                      }
                     console.log('data received: ' + data);
                 },
