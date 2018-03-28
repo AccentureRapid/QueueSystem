@@ -89,10 +89,12 @@
                 // 回调函数，接受服务器端返回给客户端的值，即result值
                 success: function (data) {
                     if (data.result.redirectable) {
-                        abp.message.warn('需要跳转');
+                        var returnUrl = getParameterByName("returnUrl");
+                        window.location.href = returnUrl;
                     }
                     else {
-                        abp.message.success(data.result.usersCountBeforeMe + ' , ' + data.result.predictedMinutes);
+                        $('#UersCountBeforeMe').text(data.result.usersCountBeforeMe);
+                        $('#PredictedMinutes').text(data.result.predictedMinutes);
                     }
                 },
 
@@ -102,6 +104,7 @@
             });
             setTimeout(StartRefreshQueueInformation, 5000);
         }
+
         StartRefreshQueueInformation();
 
         function getParameterByName(name, url) {
