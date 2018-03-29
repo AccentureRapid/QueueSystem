@@ -16,6 +16,7 @@ namespace Pfizer.QueueSystem.Services
 
         Task<bool> Exists(string userId, int timeSpanId);
         Task<int> GetTotalUsersCountBeforeMe(string connectionId);
+        Task<int> GetTotalUsersCountBeforeMe();
 
     }
 }

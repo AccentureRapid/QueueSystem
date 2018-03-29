@@ -38,7 +38,8 @@ namespace Pfizer.QueueSystem.Services
 
         public async Task<int> GetOnlineCustomersCount(DateTime lastActivityFromUtc)
         {
-            var result = await Task.Run(() => {
+            var result = await Task.Run(() =>
+            {
                 var query = from r in this.db.RequestTableForFace
                             select r;
 
@@ -52,7 +53,8 @@ namespace Pfizer.QueueSystem.Services
 
         public async Task<FastToken> SaveFastToken(FastToken entity)
         {
-            var result = await Task.Run(() => {
+            var result = await Task.Run(() =>
+            {
                 var token = _fastTokenRepository.Insert(entity);
                 return token;
             });
@@ -63,11 +65,12 @@ namespace Pfizer.QueueSystem.Services
 
         public async Task<bool> Exists(string userId, int timeSpanId)
         {
-            var result = await Task.Run(() => {
+            var result = await Task.Run(() =>
+            {
                 //TODO add two column: 1 date 2 id in the timespan collection
                 var date = DateTime.Now.Date.ToString("yyyyMMdd");
-                var count = _fastTokenRepository.Count(x => x.UserEID == userId 
-                            && x.Date == date && x.TimeSpanId == timeSpanId );
+                var count = _fastTokenRepository.Count(x => x.UserEID == userId
+                            && x.Date == date && x.TimeSpanId == timeSpanId);
 
                 if (count > 0)
                     return true;
@@ -76,13 +79,14 @@ namespace Pfizer.QueueSystem.Services
 
             });
 
-           
+
             return result;
         }
 
         public async Task<int> GetTotalUsersCountBeforeMe(string connectionId)
         {
-            var result = await Task.Run(() => {
+            var result = await Task.Run(() =>
+            {
                 var queueHistory = _queueHistoryRepository.GetAll().Where(x => x.ConnectionId == connectionId).ToList().FirstOrDefault();
                 if (queueHistory != null)
                 {
@@ -94,7 +98,22 @@ namespace Pfizer.QueueSystem.Services
 
 
             return result;
-            
+
+        }
+
+        public async Task<int> GetTotalUsersCountBeforeMe()
+        {
+            var result = await Task.Run(() =>
+            {
+
+                var count = _queueHistoryRepository.Count(x => x.CreationTime < DateTime.Now);
+                return count;
+
+            });
+
+
+            return result;
+
         }
     }
 }

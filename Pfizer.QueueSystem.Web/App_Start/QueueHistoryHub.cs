@@ -45,7 +45,7 @@ public class QueueHistoryHub : Hub, ISingletonDependency
             ConnectionId = connectionId
         });
 
-        var refreshInformation = await _queueSystemService.GetQueueInfomation(new Pfizer.QueueSystem.Services.Dto.ConnectionDto { ConnectionId = Context.ConnectionId });
+        var refreshInformation = await _queueSystemService.GetQueueInfomationForFirsttime();
         Clients.Client(Context.ConnectionId).setQueueInformation(refreshInformation.UsersCountBeforeMe, refreshInformation.PredictedMinutes);
 
         var count = await _queueHistoryService.GetQueueHistoryCount();

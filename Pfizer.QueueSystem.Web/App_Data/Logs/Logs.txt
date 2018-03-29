@@ -826,3 +826,925 @@ WARN  2018-03-29 10:08:22,349 [31   ] nHandling.AbpApiExceptionFilterAttribute -
 DEBUG 2018-03-29 10:08:22,422 [25   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"ba4c89b1-ae93-4dbe-88a8-0f6a9c5bd1ea","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:08:22.4228958+08:00","Properties":{}}
 DEBUG 2018-03-29 10:08:22,422 [25   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: ba4c89b1-ae93-4dbe-88a8-0f6a9c5bd1ea
 DEBUG 2018-03-29 10:08:22,436 [63   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: ba4c89b1-ae93-4dbe-88a8-0f6a9c5bd1ea
+DEBUG 2018-03-29 10:20:54,512 [77   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-29 10:20:54,541 [77   ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-03-29 10:20:54,550 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.Web.QueueSystemWebModule, Pfizer.QueueSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,554 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemDataModule, Pfizer.QueueSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,554 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,555 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,555 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,556 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,557 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,557 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,557 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemCoreModule, Pfizer.QueueSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,558 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemApplicationModule, Pfizer.QueueSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,558 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,558 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.Api.QueueSystemWebApiModule, Pfizer.QueueSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,559 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,559 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,559 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,560 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,560 [77   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:54,566 [77   ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-03-29 10:20:54,960 [77   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:20:54,960 [77   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:20:54,960 [77   ] o.Configuration.LanguageManagementConfig - Converted QueueSystem (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:20:54,960 [77   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:20:55,372 [77   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Pfizer.QueueSystem.EntityFramework.QueueSystemDbContext, Pfizer.QueueSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:55,416 [77   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Pfizer.QueueSystem.EntityFramework.FaceDeviceLogDbContext, Pfizer.QueueSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:20:56,772 [77   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-03-29 10:20:56,780 [77   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-29 10:20:56,791 [77   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-03-29 10:20:56,793 [77   ] Abp.Localization.LocalizationManager     - Initialized localization source: QueueSystem
+DEBUG 2018-03-29 10:20:56,794 [77   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-29 10:20:56,843 [77   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 10:20:56,903 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-03-29 10:20:56,903 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-03-29 10:20:56,910 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-03-29 10:20:56,910 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.CreateUserDto
+DEBUG 2018-03-29 10:20:56,911 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.UpdateUserDto
+DEBUG 2018-03-29 10:20:56,911 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.UserDto
+DEBUG 2018-03-29 10:20:56,911 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Services.Dto.QueueHistoryDto
+DEBUG 2018-03-29 10:20:56,911 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.CreateRoleDto
+DEBUG 2018-03-29 10:20:56,911 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.PermissionDto
+DEBUG 2018-03-29 10:20:56,911 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.RoleDto
+DEBUG 2018-03-29 10:20:56,911 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-03-29 10:20:56,911 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-03-29 10:20:56,912 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.TenantDto
+DEBUG 2018-03-29 10:20:56,912 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-03-29 10:20:56,912 [77   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-03-29 10:20:58,230 [77   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-03-29 10:20:58,232 [77   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-03-29 10:20:58,233 [77   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Services.IQueueHistoryService' with service name 'app/queueHistoryService'.
+DEBUG 2018-03-29 10:20:58,234 [77   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Services.IQueueSystemService' with service name 'app/queueSystemService'.
+DEBUG 2018-03-29 10:20:58,235 [77   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-03-29 10:20:58,236 [77   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-03-29 10:20:58,237 [77   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-03-29 10:20:58,239 [77   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-03-29 10:20:59,638 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"dea7c702-10ac-46b0-a391-afd06fc0da2a","IpAddress":null,"TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:20:59.5311963+08:00","Properties":{}}
+DEBUG 2018-03-29 10:20:59,639 [37   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"ba4c89b1-ae93-4dbe-88a8-0f6a9c5bd1ea","IpAddress":null,"TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:20:59.5321972+08:00","Properties":{}}
+DEBUG 2018-03-29 10:21:04,367 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"bd729901-147f-43ed-badb-ce4b7cb52b42","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:21:04.3676307+08:00","Properties":{}}
+DEBUG 2018-03-29 10:21:04,367 [21   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"ae809886-77c6-41b6-a2d7-379d1e51a94f","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:21:04.3676307+08:00","Properties":{}}
+DEBUG 2018-03-29 10:21:04,389 [54   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: ae809886-77c6-41b6-a2d7-379d1e51a94f
+DEBUG 2018-03-29 10:21:04,389 [21   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: ae809886-77c6-41b6-a2d7-379d1e51a94f
+DEBUG 2018-03-29 10:21:34,212 [87   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: bd729901-147f-43ed-badb-ce4b7cb52b42
+DEBUG 2018-03-29 10:21:34,428 [87   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: bd729901-147f-43ed-badb-ce4b7cb52b42
+DEBUG 2018-03-29 10:21:35,562 [87   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"26d16bd1-ad23-4972-8c96-9d7f183b96b6","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:21:35.5609048+08:00","Properties":{}}
+DEBUG 2018-03-29 10:21:35,564 [87   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 26d16bd1-ad23-4972-8c96-9d7f183b96b6
+DEBUG 2018-03-29 10:21:35,717 [87   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 26d16bd1-ad23-4972-8c96-9d7f183b96b6
+DEBUG 2018-03-29 10:21:39,418 [87   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: dea7c702-10ac-46b0-a391-afd06fc0da2a
+DEBUG 2018-03-29 10:21:39,472 [87   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: ba4c89b1-ae93-4dbe-88a8-0f6a9c5bd1ea
+DEBUG 2018-03-29 10:21:39,484 [12   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: ba4c89b1-ae93-4dbe-88a8-0f6a9c5bd1ea
+DEBUG 2018-03-29 10:21:39,484 [87   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: ba4c89b1-ae93-4dbe-88a8-0f6a9c5bd1ea
+DEBUG 2018-03-29 10:21:39,879 [37   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 26d16bd1-ad23-4972-8c96-9d7f183b96b6
+DEBUG 2018-03-29 10:21:39,998 [37   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 26d16bd1-ad23-4972-8c96-9d7f183b96b6
+DEBUG 2018-03-29 10:21:40,164 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e8b5c844-b5da-4a7f-aa85-8aee64a59f41","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:21:40.1649781+08:00","Properties":{}}
+DEBUG 2018-03-29 10:21:40,164 [54   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: e8b5c844-b5da-4a7f-aa85-8aee64a59f41
+DEBUG 2018-03-29 10:21:40,189 [37   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e8b5c844-b5da-4a7f-aa85-8aee64a59f41
+DEBUG 2018-03-29 10:21:41,503 [87   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e8b5c844-b5da-4a7f-aa85-8aee64a59f41
+DEBUG 2018-03-29 10:21:41,534 [12   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: e8b5c844-b5da-4a7f-aa85-8aee64a59f41
+DEBUG 2018-03-29 10:21:41,747 [84   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"a4d1b1fa-a4cd-4391-9eae-5912a003c964","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:21:41.7470041+08:00","Properties":{}}
+DEBUG 2018-03-29 10:21:41,747 [84   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: a4d1b1fa-a4cd-4391-9eae-5912a003c964
+DEBUG 2018-03-29 10:21:41,754 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: a4d1b1fa-a4cd-4391-9eae-5912a003c964
+DEBUG 2018-03-29 10:21:49,745 [87   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"595078e7-ffb6-4e22-b71d-e74d9bee4b87","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:21:49.7453381+08:00","Properties":{}}
+DEBUG 2018-03-29 10:21:49,746 [87   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 595078e7-ffb6-4e22-b71d-e74d9bee4b87
+DEBUG 2018-03-29 10:21:49,757 [87   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 595078e7-ffb6-4e22-b71d-e74d9bee4b87
+DEBUG 2018-03-29 10:22:26,359 [33   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"9af15104-27ab-4065-bafe-7107693ba97a","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:22:26.3596632+08:00","Properties":{}}
+DEBUG 2018-03-29 10:22:26,359 [33   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 9af15104-27ab-4065-bafe-7107693ba97a
+DEBUG 2018-03-29 10:22:26,374 [84   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 9af15104-27ab-4065-bafe-7107693ba97a
+DEBUG 2018-03-29 10:23:31,867 [37   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"4115ef10-fd79-47cb-aeb7-63c0982d8633","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:23:31.8672331+08:00","Properties":{}}
+DEBUG 2018-03-29 10:23:31,867 [37   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 4115ef10-fd79-47cb-aeb7-63c0982d8633
+DEBUG 2018-03-29 10:23:31,878 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 4115ef10-fd79-47cb-aeb7-63c0982d8633
+DEBUG 2018-03-29 10:23:42,992 [33   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 4115ef10-fd79-47cb-aeb7-63c0982d8633
+DEBUG 2018-03-29 10:23:43,011 [33   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 4115ef10-fd79-47cb-aeb7-63c0982d8633
+DEBUG 2018-03-29 10:23:54,561 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 595078e7-ffb6-4e22-b71d-e74d9bee4b87
+DEBUG 2018-03-29 10:23:54,577 [54   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 595078e7-ffb6-4e22-b71d-e74d9bee4b87
+DEBUG 2018-03-29 10:24:05,810 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 9af15104-27ab-4065-bafe-7107693ba97a
+DEBUG 2018-03-29 10:24:05,832 [87   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 9af15104-27ab-4065-bafe-7107693ba97a
+DEBUG 2018-03-29 10:24:06,599 [37   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: a4d1b1fa-a4cd-4391-9eae-5912a003c964
+DEBUG 2018-03-29 10:24:06,618 [84   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: a4d1b1fa-a4cd-4391-9eae-5912a003c964
+DEBUG 2018-03-29 10:24:13,874 [28   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: ae809886-77c6-41b6-a2d7-379d1e51a94f
+DEBUG 2018-03-29 10:24:13,892 [28   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: ae809886-77c6-41b6-a2d7-379d1e51a94f
+DEBUG 2018-03-29 10:24:37,753 [43   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"9dca9a66-fe18-402c-a607-de6e201e6202","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:24:37.7535166+08:00","Properties":{}}
+DEBUG 2018-03-29 10:24:37,753 [43   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 9dca9a66-fe18-402c-a607-de6e201e6202
+DEBUG 2018-03-29 10:24:37,802 [87   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 9dca9a66-fe18-402c-a607-de6e201e6202
+DEBUG 2018-03-29 10:24:37,848 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 9dca9a66-fe18-402c-a607-de6e201e6202
+DEBUG 2018-03-29 10:24:37,874 [9    ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 9dca9a66-fe18-402c-a607-de6e201e6202
+DEBUG 2018-03-29 10:24:42,647 [28   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"180e4087-5068-461e-b911-9c2a276bd77f","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:24:42.6474639+08:00","Properties":{}}
+DEBUG 2018-03-29 10:24:42,647 [28   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 180e4087-5068-461e-b911-9c2a276bd77f
+DEBUG 2018-03-29 10:24:42,682 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 180e4087-5068-461e-b911-9c2a276bd77f
+DEBUG 2018-03-29 10:24:42,735 [84   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 180e4087-5068-461e-b911-9c2a276bd77f
+DEBUG 2018-03-29 10:24:42,765 [84   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 180e4087-5068-461e-b911-9c2a276bd77f
+DEBUG 2018-03-29 10:25:22,920 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-29 10:25:23,041 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-03-29 10:25:23,050 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.Web.QueueSystemWebModule, Pfizer.QueueSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,056 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemDataModule, Pfizer.QueueSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,056 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,056 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,057 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,057 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemCoreModule, Pfizer.QueueSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemApplicationModule, Pfizer.QueueSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,060 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.Api.QueueSystemWebApiModule, Pfizer.QueueSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,060 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,061 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,061 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,061 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,061 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,066 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-03-29 10:25:23,434 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:25:23,434 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:25:23,434 [1    ] o.Configuration.LanguageManagementConfig - Converted QueueSystem (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:25:23,434 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:25:23,865 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Pfizer.QueueSystem.EntityFramework.QueueSystemDbContext, Pfizer.QueueSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:23,935 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Pfizer.QueueSystem.EntityFramework.FaceDeviceLogDbContext, Pfizer.QueueSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:25:24,587 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-03-29 10:25:24,598 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-29 10:25:24,610 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-03-29 10:25:24,614 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: QueueSystem
+DEBUG 2018-03-29 10:25:24,616 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-29 10:25:24,670 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 10:25:24,722 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-03-29 10:25:24,722 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-03-29 10:25:24,727 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-03-29 10:25:24,727 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.CreateUserDto
+DEBUG 2018-03-29 10:25:24,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.UpdateUserDto
+DEBUG 2018-03-29 10:25:24,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.UserDto
+DEBUG 2018-03-29 10:25:24,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Services.Dto.QueueHistoryDto
+DEBUG 2018-03-29 10:25:24,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.CreateRoleDto
+DEBUG 2018-03-29 10:25:24,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.PermissionDto
+DEBUG 2018-03-29 10:25:24,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.RoleDto
+DEBUG 2018-03-29 10:25:24,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-03-29 10:25:24,729 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-03-29 10:25:24,729 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.TenantDto
+DEBUG 2018-03-29 10:25:24,729 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-03-29 10:25:24,729 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-03-29 10:25:26,210 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-03-29 10:25:26,211 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-03-29 10:25:26,220 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Services.IQueueHistoryService' with service name 'app/queueHistoryService'.
+DEBUG 2018-03-29 10:25:26,224 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Services.IQueueSystemService' with service name 'app/queueSystemService'.
+DEBUG 2018-03-29 10:25:26,225 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-03-29 10:25:26,228 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-03-29 10:25:26,234 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-03-29 10:25:26,236 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-03-29 10:25:41,431 [37   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"52c0cebe-755a-4289-9d8c-24f9d055bdd9","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:25:41.4132467+08:00","Properties":{}}
+DEBUG 2018-03-29 10:25:41,468 [37   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 52c0cebe-755a-4289-9d8c-24f9d055bdd9
+DEBUG 2018-03-29 10:25:41,643 [37   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 52c0cebe-755a-4289-9d8c-24f9d055bdd9
+DEBUG 2018-03-29 10:28:19,814 [48   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-29 10:28:19,840 [48   ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-03-29 10:28:19,848 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.Web.QueueSystemWebModule, Pfizer.QueueSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,852 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemDataModule, Pfizer.QueueSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,852 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,852 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,852 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,853 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,853 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,854 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,854 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemCoreModule, Pfizer.QueueSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,854 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemApplicationModule, Pfizer.QueueSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,854 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,855 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.Api.QueueSystemWebApiModule, Pfizer.QueueSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,855 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,855 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,855 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,855 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,856 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:19,860 [48   ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-03-29 10:28:20,155 [48   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:28:20,155 [48   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:28:20,155 [48   ] o.Configuration.LanguageManagementConfig - Converted QueueSystem (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:28:20,155 [48   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:28:20,543 [48   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Pfizer.QueueSystem.EntityFramework.QueueSystemDbContext, Pfizer.QueueSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:20,591 [48   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Pfizer.QueueSystem.EntityFramework.FaceDeviceLogDbContext, Pfizer.QueueSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:28:22,173 [48   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-03-29 10:28:22,182 [48   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-29 10:28:22,190 [48   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-03-29 10:28:22,192 [48   ] Abp.Localization.LocalizationManager     - Initialized localization source: QueueSystem
+DEBUG 2018-03-29 10:28:22,193 [48   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-29 10:28:22,253 [48   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 10:28:22,313 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-03-29 10:28:22,313 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-03-29 10:28:22,318 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-03-29 10:28:22,319 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.CreateUserDto
+DEBUG 2018-03-29 10:28:22,319 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.UpdateUserDto
+DEBUG 2018-03-29 10:28:22,319 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.UserDto
+DEBUG 2018-03-29 10:28:22,320 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Services.Dto.QueueHistoryDto
+DEBUG 2018-03-29 10:28:22,320 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.CreateRoleDto
+DEBUG 2018-03-29 10:28:22,320 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.PermissionDto
+DEBUG 2018-03-29 10:28:22,320 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.RoleDto
+DEBUG 2018-03-29 10:28:22,320 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-03-29 10:28:22,320 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-03-29 10:28:22,320 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.TenantDto
+DEBUG 2018-03-29 10:28:22,320 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-03-29 10:28:22,320 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-03-29 10:28:23,690 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-03-29 10:28:23,691 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-03-29 10:28:23,692 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Services.IQueueHistoryService' with service name 'app/queueHistoryService'.
+DEBUG 2018-03-29 10:28:23,693 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Services.IQueueSystemService' with service name 'app/queueSystemService'.
+DEBUG 2018-03-29 10:28:23,694 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-03-29 10:28:23,695 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-03-29 10:28:23,696 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-03-29 10:28:23,697 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-03-29 10:28:25,410 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"52c0cebe-755a-4289-9d8c-24f9d055bdd9","IpAddress":null,"TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:28:25.2836305+08:00","Properties":{}}
+DEBUG 2018-03-29 10:28:25,740 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"eac14911-245d-460a-bb09-7a15c3ebaeb6","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:28:25.7409551+08:00","Properties":{}}
+DEBUG 2018-03-29 10:28:25,764 [29   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: eac14911-245d-460a-bb09-7a15c3ebaeb6
+DEBUG 2018-03-29 10:28:52,851 [32   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: eac14911-245d-460a-bb09-7a15c3ebaeb6
+DEBUG 2018-03-29 10:28:53,416 [32   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: eac14911-245d-460a-bb09-7a15c3ebaeb6
+DEBUG 2018-03-29 10:28:54,525 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"2cf2cca5-f74a-428b-8725-27ca625ad230","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:28:54.524901+08:00","Properties":{}}
+DEBUG 2018-03-29 10:28:54,526 [5    ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 2cf2cca5-f74a-428b-8725-27ca625ad230
+DEBUG 2018-03-29 10:28:54,637 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 2cf2cca5-f74a-428b-8725-27ca625ad230
+DEBUG 2018-03-29 10:29:05,055 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 52c0cebe-755a-4289-9d8c-24f9d055bdd9
+DEBUG 2018-03-29 10:29:05,131 [80   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 52c0cebe-755a-4289-9d8c-24f9d055bdd9
+DEBUG 2018-03-29 10:30:18,833 [80   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is reconnected: {"ConnectionId":"2cf2cca5-f74a-428b-8725-27ca625ad230","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:28:54.524901+08:00","Properties":{}}
+DEBUG 2018-03-29 10:32:40,794 [48   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-29 10:32:40,817 [48   ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-03-29 10:32:40,825 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.Web.QueueSystemWebModule, Pfizer.QueueSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,828 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemDataModule, Pfizer.QueueSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,829 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,829 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,829 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,829 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,830 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,830 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,830 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemCoreModule, Pfizer.QueueSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,831 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.QueueSystemApplicationModule, Pfizer.QueueSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,831 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,831 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Pfizer.QueueSystem.Api.QueueSystemWebApiModule, Pfizer.QueueSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,831 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,831 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,832 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,832 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,832 [48   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:40,836 [48   ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-03-29 10:32:41,110 [48   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:32:41,111 [48   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:32:41,111 [48   ] o.Configuration.LanguageManagementConfig - Converted QueueSystem (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:32:41,111 [48   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-29 10:32:41,526 [48   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Pfizer.QueueSystem.EntityFramework.QueueSystemDbContext, Pfizer.QueueSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:41,568 [48   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Pfizer.QueueSystem.EntityFramework.FaceDeviceLogDbContext, Pfizer.QueueSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 10:32:43,273 [48   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-03-29 10:32:43,282 [48   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-29 10:32:43,290 [48   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-03-29 10:32:43,292 [48   ] Abp.Localization.LocalizationManager     - Initialized localization source: QueueSystem
+DEBUG 2018-03-29 10:32:43,294 [48   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-29 10:32:43,350 [48   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 10:32:43,400 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-03-29 10:32:43,400 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-03-29 10:32:43,405 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-03-29 10:32:43,405 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.CreateUserDto
+DEBUG 2018-03-29 10:32:43,405 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.UpdateUserDto
+DEBUG 2018-03-29 10:32:43,405 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Users.Dto.UserDto
+DEBUG 2018-03-29 10:32:43,406 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Services.Dto.QueueHistoryDto
+DEBUG 2018-03-29 10:32:43,406 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.CreateRoleDto
+DEBUG 2018-03-29 10:32:43,406 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.PermissionDto
+DEBUG 2018-03-29 10:32:43,406 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Roles.Dto.RoleDto
+DEBUG 2018-03-29 10:32:43,406 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-03-29 10:32:43,406 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-03-29 10:32:43,406 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.MultiTenancy.Dto.TenantDto
+DEBUG 2018-03-29 10:32:43,406 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-03-29 10:32:43,406 [48   ] Abp.AutoMapper.AbpAutoMapperModule       - Pfizer.QueueSystem.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-03-29 10:32:44,629 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-03-29 10:32:44,630 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-03-29 10:32:44,631 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Services.IQueueHistoryService' with service name 'app/queueHistoryService'.
+DEBUG 2018-03-29 10:32:44,632 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Services.IQueueSystemService' with service name 'app/queueSystemService'.
+DEBUG 2018-03-29 10:32:44,634 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-03-29 10:32:44,635 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-03-29 10:32:44,635 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-03-29 10:32:44,636 [48   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Pfizer.QueueSystem.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-03-29 10:32:46,023 [39   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"2cf2cca5-f74a-428b-8725-27ca625ad230","IpAddress":null,"TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:32:45.9436385+08:00","Properties":{}}
+DEBUG 2018-03-29 10:32:46,050 [44   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"49bc5241-8ba9-4986-a3b3-8c732f869578","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:32:46.0507148+08:00","Properties":{}}
+DEBUG 2018-03-29 10:32:46,085 [44   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 49bc5241-8ba9-4986-a3b3-8c732f869578
+WARN  2018-03-29 10:32:46,117 [29   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.QueueSystemServiceProxy.GetQueueInfomation(ConnectionDto dto)
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception)
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetQueueInfomation(ConnectionDto dto)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2018-03-29 10:32:46,117 [34   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.QueueSystemServiceProxy.GetQueueInfomation(ConnectionDto dto)
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception)
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetQueueInfomation(ConnectionDto dto)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2018-03-29 10:32:46,175 [29   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2018-03-29 10:32:46,175 [34   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2018-03-29 10:32:46,175 [34   ] nHandling.AbpApiExceptionFilterAttribute - dto is null! (dto)
+WARN  2018-03-29 10:32:46,175 [29   ] nHandling.AbpApiExceptionFilterAttribute - dto is null! (dto)
+DEBUG 2018-03-29 10:33:25,721 [32   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 2cf2cca5-f74a-428b-8725-27ca625ad230
+DEBUG 2018-03-29 10:33:25,837 [87   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 2cf2cca5-f74a-428b-8725-27ca625ad230
+DEBUG 2018-03-29 10:33:52,261 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 49bc5241-8ba9-4986-a3b3-8c732f869578
+DEBUG 2018-03-29 10:33:52,275 [54   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 49bc5241-8ba9-4986-a3b3-8c732f869578
+WARN  2018-03-29 10:33:52,655 [27   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.QueueSystemServiceProxy.GetQueueInfomation(ConnectionDto dto)
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception)
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetQueueInfomation(ConnectionDto dto)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2018-03-29 10:33:52,656 [27   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2018-03-29 10:33:52,657 [27   ] nHandling.AbpApiExceptionFilterAttribute - dto is null! (dto)
+DEBUG 2018-03-29 10:33:52,718 [32   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e99b16ac-c2d0-4f02-8de3-d6887ed01616","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:33:52.7169927+08:00","Properties":{}}
+DEBUG 2018-03-29 10:33:52,718 [32   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: e99b16ac-c2d0-4f02-8de3-d6887ed01616
+DEBUG 2018-03-29 10:33:52,807 [59   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e99b16ac-c2d0-4f02-8de3-d6887ed01616
+DEBUG 2018-03-29 10:34:16,327 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e99b16ac-c2d0-4f02-8de3-d6887ed01616
+DEBUG 2018-03-29 10:34:16,484 [80   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: e99b16ac-c2d0-4f02-8de3-d6887ed01616
+WARN  2018-03-29 10:34:16,981 [34   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.QueueSystemServiceProxy.GetQueueInfomation(ConnectionDto dto)
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception)
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetQueueInfomation(ConnectionDto dto)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2018-03-29 10:34:16,981 [34   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2018-03-29 10:34:16,981 [34   ] nHandling.AbpApiExceptionFilterAttribute - dto is null! (dto)
+DEBUG 2018-03-29 10:34:17,132 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"3d4d9e62-d74d-4b33-88cb-b9993ce0922f","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:34:17.1325263+08:00","Properties":{}}
+DEBUG 2018-03-29 10:34:17,132 [30   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 3d4d9e62-d74d-4b33-88cb-b9993ce0922f
+DEBUG 2018-03-29 10:34:17,167 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 3d4d9e62-d74d-4b33-88cb-b9993ce0922f
+DEBUG 2018-03-29 10:36:04,519 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 3d4d9e62-d74d-4b33-88cb-b9993ce0922f
+DEBUG 2018-03-29 10:36:10,120 [80   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"3d4d9e62-d74d-4b33-88cb-b9993ce0922f","IpAddress":null,"TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:36:10.1205613+08:00","Properties":{}}
+DEBUG 2018-03-29 10:36:14,449 [34   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 3d4d9e62-d74d-4b33-88cb-b9993ce0922f
+WARN  2018-03-29 10:36:24,618 [38   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.QueueSystemServiceProxy.GetQueueInfomation(ConnectionDto dto)
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception)
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetQueueInfomation(ConnectionDto dto)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2018-03-29 10:36:24,618 [38   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2018-03-29 10:36:24,619 [38   ] nHandling.AbpApiExceptionFilterAttribute - dto is null! (dto)
+DEBUG 2018-03-29 10:36:24,700 [36   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"81e15bde-5bdf-4b3f-b3a3-a448fa9aa018","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:36:24.700331+08:00","Properties":{}}
+DEBUG 2018-03-29 10:36:24,701 [36   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 81e15bde-5bdf-4b3f-b3a3-a448fa9aa018
+DEBUG 2018-03-29 10:36:24,712 [22   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 81e15bde-5bdf-4b3f-b3a3-a448fa9aa018
+DEBUG 2018-03-29 10:36:36,632 [59   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 81e15bde-5bdf-4b3f-b3a3-a448fa9aa018
+DEBUG 2018-03-29 10:36:36,673 [80   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 81e15bde-5bdf-4b3f-b3a3-a448fa9aa018
+WARN  2018-03-29 10:36:36,812 [54   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.QueueSystemServiceProxy.GetQueueInfomation(ConnectionDto dto)
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception)
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetQueueInfomation(ConnectionDto dto)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2018-03-29 10:36:36,813 [54   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2018-03-29 10:36:36,813 [54   ] nHandling.AbpApiExceptionFilterAttribute - dto is null! (dto)
+DEBUG 2018-03-29 10:36:36,879 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"0f073757-054b-482b-afd4-632f7086aaed","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:36:36.8793344+08:00","Properties":{}}
+DEBUG 2018-03-29 10:36:36,880 [11   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 0f073757-054b-482b-afd4-632f7086aaed
+DEBUG 2018-03-29 10:36:36,890 [59   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 0f073757-054b-482b-afd4-632f7086aaed
+WARN  2018-03-29 10:37:34,602 [54   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.QueueSystemServiceProxy.GetQueueInfomation(ConnectionDto dto)
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception)
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetQueueInfomation(ConnectionDto dto)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2018-03-29 10:37:34,603 [54   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2018-03-29 10:37:34,603 [54   ] nHandling.AbpApiExceptionFilterAttribute - dto is null! (dto)
+DEBUG 2018-03-29 10:37:34,631 [59   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"ce4809af-a168-4a78-8be6-35bf0bba337d","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:37:34.6318212+08:00","Properties":{}}
+DEBUG 2018-03-29 10:37:34,631 [59   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: ce4809af-a168-4a78-8be6-35bf0bba337d
+DEBUG 2018-03-29 10:37:49,750 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: ce4809af-a168-4a78-8be6-35bf0bba337d
+DEBUG 2018-03-29 10:37:51,065 [32   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is reconnected: {"ConnectionId":"3d4d9e62-d74d-4b33-88cb-b9993ce0922f","IpAddress":null,"TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:36:10.1205613+08:00","Properties":{}}
+DEBUG 2018-03-29 10:37:51,092 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is reconnected: {"ConnectionId":"0f073757-054b-482b-afd4-632f7086aaed","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:36:36.8793344+08:00","Properties":{}}
+DEBUG 2018-03-29 10:37:59,411 [53   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 0f073757-054b-482b-afd4-632f7086aaed
+DEBUG 2018-03-29 10:37:59,431 [53   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 0f073757-054b-482b-afd4-632f7086aaed
+DEBUG 2018-03-29 10:38:13,459 [80   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 3d4d9e62-d74d-4b33-88cb-b9993ce0922f
+DEBUG 2018-03-29 10:38:13,481 [80   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 3d4d9e62-d74d-4b33-88cb-b9993ce0922f
+DEBUG 2018-03-29 10:38:35,608 [34   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: ce4809af-a168-4a78-8be6-35bf0bba337d
+DEBUG 2018-03-29 10:38:35,700 [34   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: ce4809af-a168-4a78-8be6-35bf0bba337d
+WARN  2018-03-29 10:38:35,844 [54   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.QueueSystemServiceProxy.GetQueueInfomation(ConnectionDto dto)
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception)
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetQueueInfomation(ConnectionDto dto)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2018-03-29 10:38:35,845 [54   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2018-03-29 10:38:35,845 [54   ] nHandling.AbpApiExceptionFilterAttribute - dto is null! (dto)
+DEBUG 2018-03-29 10:38:35,890 [53   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"86e58212-af1c-4fb3-a427-f16fbb3b0739","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:38:35.8906631+08:00","Properties":{}}
+DEBUG 2018-03-29 10:38:35,890 [53   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 86e58212-af1c-4fb3-a427-f16fbb3b0739
+DEBUG 2018-03-29 10:38:35,898 [50   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 86e58212-af1c-4fb3-a427-f16fbb3b0739
+WARN  2018-03-29 10:38:46,586 [51   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.QueueSystemServiceProxy.GetQueueInfomation(ConnectionDto dto)
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception)
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetQueueInfomation(ConnectionDto dto)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2018-03-29 10:38:46,586 [51   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2018-03-29 10:38:46,586 [51   ] nHandling.AbpApiExceptionFilterAttribute - dto is null! (dto)
+DEBUG 2018-03-29 10:38:46,653 [52   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"a3b20ecc-3205-4ceb-9b53-dcd963115cdf","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:38:46.6536045+08:00","Properties":{}}
+DEBUG 2018-03-29 10:38:46,654 [52   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: a3b20ecc-3205-4ceb-9b53-dcd963115cdf
+DEBUG 2018-03-29 10:38:46,686 [39   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: a3b20ecc-3205-4ceb-9b53-dcd963115cdf
+WARN  2018-03-29 10:38:56,281 [55   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.QueueSystemServiceProxy.GetQueueInfomation(ConnectionDto dto)
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception)
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetQueueInfomation(ConnectionDto dto)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2018-03-29 10:38:56,282 [55   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2018-03-29 10:38:56,282 [55   ] nHandling.AbpApiExceptionFilterAttribute - dto is null! (dto)
+DEBUG 2018-03-29 10:38:56,347 [53   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"48d3b364-e5b2-4156-949f-ea52b9a56ee7","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:38:56.3473431+08:00","Properties":{}}
+DEBUG 2018-03-29 10:38:56,347 [53   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 48d3b364-e5b2-4156-949f-ea52b9a56ee7
+DEBUG 2018-03-29 10:38:56,360 [51   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 48d3b364-e5b2-4156-949f-ea52b9a56ee7
+WARN  2018-03-29 10:39:07,941 [54   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.QueueSystemServiceProxy.GetQueueInfomation(ConnectionDto dto)
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception)
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetQueueInfomation(ConnectionDto dto)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2018-03-29 10:39:07,941 [54   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2018-03-29 10:39:07,942 [54   ] nHandling.AbpApiExceptionFilterAttribute - dto is null! (dto)
+DEBUG 2018-03-29 10:39:08,003 [60   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"a5eaae64-caea-44c4-acb4-d5796b5e0e64","IpAddress":"10.202.189.139","TenantId":null,"UserId":null,"ConnectTime":"2018-03-29T10:39:08.0033429+08:00","Properties":{}}
+DEBUG 2018-03-29 10:39:08,003 [60   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: a5eaae64-caea-44c4-acb4-d5796b5e0e64
+DEBUG 2018-03-29 10:39:08,013 [52   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: a5eaae64-caea-44c4-acb4-d5796b5e0e64
+DEBUG 2018-03-29 10:39:14,389 [80   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: a3b20ecc-3205-4ceb-9b53-dcd963115cdf
+DEBUG 2018-03-29 10:39:14,409 [80   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: a3b20ecc-3205-4ceb-9b53-dcd963115cdf

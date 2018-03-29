@@ -65,6 +65,28 @@ namespace Pfizer.QueueSystem.Services
             return result;
         }
 
+        public async Task<RefreshQueueInformationDto> GetQueueInfomationForFirsttime()
+        {   //0. invoke for the first time when hub push information to client.
+            //1. get count of users before me, if == 0 : && total online customers < max count, redirectable = true
+            //2. get count of users before me for display and predicted total minutes
+            var result = new RefreshQueueInformationDto();
+            var predictedMinutesForOneUser = Convert.ToInt32(ConfigurationManager.AppSettings["PredictedMinutesForOneUser"]);
+
+            var countBeforeMe = await _queueSystemManager.GetTotalUsersCountBeforeMe();
+            var totalOnlineCustomers = await this.GetOnlineCustomersCount();
+            bool redirctable = false;
+            var canAccessSystem = await this.CanAccessSystem();
+            if (countBeforeMe == 0 && canAccessSystem)
+            {
+                redirctable = true;
+            }
+            result.Redirectable = redirctable;
+            result.UsersCountBeforeMe = countBeforeMe;
+            result.PredictedMinutes = predictedMinutesForOneUser * countBeforeMe;
+
+            return result;
+        }
+
         public async Task<List<TimeSpanDto>> GetTimeSpanCollection()
         {
             var result = await Task.Run(() =>

@@ -20,5 +20,6 @@ namespace Pfizer.QueueSystem.Services
         Task<FastTokenResult> TakeFastToken(FastTokenDto dto);
 
         Task<RefreshQueueInformationDto> GetQueueInfomation(ConnectionDto dto);
+        Task<RefreshQueueInformationDto> GetQueueInfomationForFirsttime();
     }
 }
