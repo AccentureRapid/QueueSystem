@@ -119,8 +119,8 @@ namespace Pfizer.QueueSystem.Web.Controllers
             {
                 returnUrl = returnUrl + returnUrlHash;
             }
-
-            _eventBus.Trigger(new LoginEventData {  UserName = loginResult.User.UserName });
+            //comment demo code
+            //_eventBus.Trigger(new LoginEventData {  UserName = loginResult.User.UserName });
 
             return Json(new AjaxResponse { TargetUrl = returnUrl });
         }
