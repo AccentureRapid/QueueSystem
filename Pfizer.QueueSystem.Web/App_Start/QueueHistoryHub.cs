@@ -13,6 +13,7 @@ using System.Web;
 public class QueueHistoryHub : Hub, ISingletonDependency
 {
     private readonly IQueueHistoryService _queueHistoryService;
+    private readonly IQueueSystemService _queueSystemService;
     private readonly IEventBus _eventBus;
 
     public IAbpSession AbpSession { get; set; }
@@ -20,9 +21,11 @@ public class QueueHistoryHub : Hub, ISingletonDependency
     public ILogger Logger { get; set; }
 
     public QueueHistoryHub(IQueueHistoryService queueHistoryService,
+        IQueueSystemService queueSystemService,
         IEventBus eventBus)
     {
         _queueHistoryService = queueHistoryService;
+        _queueSystemService = queueSystemService;
         _eventBus = eventBus;
 
         AbpSession = NullAbpSession.Instance;
@@ -41,6 +44,10 @@ public class QueueHistoryHub : Hub, ISingletonDependency
             UserName = userName,
             ConnectionId = connectionId
         });
+
+        var refreshInformation = await _queueSystemService.GetQueueInfomation(new Pfizer.QueueSystem.Services.Dto.ConnectionDto { ConnectionId = Context.ConnectionId });
+        Clients.Client(Context.ConnectionId).setQueueInformation(refreshInformation.UsersCountBeforeMe, refreshInformation.PredictedMinutes);
+
         var count = await _queueHistoryService.GetQueueHistoryCount();
         Clients.All.getMessage(string.Format("User {0}, currently there are {1} users in the queue. Message from client {2}", AbpSession.UserId, count, ntid));
     }

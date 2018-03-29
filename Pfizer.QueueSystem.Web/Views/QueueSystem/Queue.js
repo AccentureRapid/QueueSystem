@@ -66,6 +66,11 @@
             console.log('received message: ' + message);
         };
 
+        queueHistoryHub.client.setQueueInformation = function (uersCountBeforeMe,predictedMinutes) { // Register for incoming messages
+            $('#UersCountBeforeMe').text(uersCountBeforeMe);
+            $('#PredictedMinutes').text(predictedMinutes);
+        };
+
         abp.event.on('abp.signalr.connected', function () { // Register to connect event
             var ntid = getParameterByName('ntid');
             queueHistoryHub.server.queue(ntid); // Send a message to the server
