@@ -134,18 +134,39 @@ namespace Pfizer.QueueSystem.Services
         {
 
             var fastTokenResult = new FastTokenResult();
+            var success = true;
 
             //1. Check UserFastToken is exists or not in the same time span.
             var exists = await _queueSystemManager.Exists(dto.NtId, dto.Id);
-
-            fastTokenResult.Exists = exists;
-
-            if (!fastTokenResult.Exists)
+            if (exists)
             {
+                success = false;
+                fastTokenResult.Message = "领取失败，您在此时间段，已领取过快速通行令牌。";
+            }
 
-                var collection = await this.GetTimeSpanCollection();
+            //2. do not more than TotalCountOfFastTokenForOneTimeSpan
+            var collection = await this.GetTimeSpanCollection();
+            var timespan = collection.Where(x => x.Id == dto.Id).FirstOrDefault();
+            var count = await _queueSystemManager.GetTotalCountOfFastTokenForThisTimeSpan(timespan.StartTime, timespan.EndTime);
+            var configuredCount = Convert.ToInt32(ConfigurationManager.AppSettings["TotalCountOfFastTokenForOneTimeSpan"]);
+            if (count >= configuredCount)
+            {
+                success = false;
+                fastTokenResult.Message = string.Format("领取失败，在此时间段，系统发放的快速通行令牌 (总数:{0}) 已经被领取完毕。", configuredCount.ToString());
+            }
 
-                var timespan = collection.Where(x => x.Id == dto.Id).FirstOrDefault();
+            //3. the total count of fast token for the same day for one user <= TotalCountForFastTokenForOneUser
+            var totalCountForFastTokenForOneUser = await _queueSystemManager.GetTotalCountOfFastTokenForUser(dto.NtId);
+            var configuredTotalCountForFastTokenForOneUser = Convert.ToInt32(ConfigurationManager.AppSettings["TotalCountForFastTokenForOneUser"]);
+            if (totalCountForFastTokenForOneUser >= configuredTotalCountForFastTokenForOneUser)
+            {
+                success = false;
+                fastTokenResult.Message = string.Format("领取失败，您今天领取的快速通行令牌已经超过系统配置的最大数 ({0})。", configuredTotalCountForFastTokenForOneUser.ToString());
+            }
+
+
+            if (fastTokenResult.Success)
+            {
                 if (timespan != null)
                 {
                     FastToken token = new FastToken
@@ -162,6 +183,9 @@ namespace Pfizer.QueueSystem.Services
 
                 }
             }
+
+            fastTokenResult.Success = success;
+
             return fastTokenResult;
         }
     }

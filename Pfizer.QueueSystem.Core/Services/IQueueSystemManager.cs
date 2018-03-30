@@ -15,6 +15,8 @@ namespace Pfizer.QueueSystem.Services
         Task<FastToken> SaveFastToken(FastToken entity);
 
         Task<bool> Exists(string userId, int timeSpanId);
+        Task<int> GetTotalCountOfFastTokenForThisTimeSpan(DateTime start, DateTime end);
+        Task<int> GetTotalCountOfFastTokenForUser(string userId);
         Task<int> GetTotalUsersCountBeforeMe(string connectionId);
         Task<int> GetTotalUsersCountBeforeMe();
 

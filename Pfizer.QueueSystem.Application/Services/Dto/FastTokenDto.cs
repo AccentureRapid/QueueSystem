@@ -15,8 +15,10 @@ namespace Pfizer.QueueSystem.Services.Dto
     }
     public class FastTokenResult
     {
-        public bool Exists { get; set; }
+        public bool Success { get; set; }
 
         public FastToken FastToken { get; set; }
+
+        public string Message { get; set; }
     }
 }

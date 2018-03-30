@@ -115,5 +115,17 @@ namespace Pfizer.QueueSystem.Services
             return result;
 
         }
+
+        public async Task<int> GetTotalCountOfFastTokenForThisTimeSpan(DateTime start, DateTime end)
+        {
+            var count = await _fastTokenRepository.CountAsync(x => x.CreationTime > start && x.CreationTime < end);
+            return count;
+        }
+
+        public async Task<int> GetTotalCountOfFastTokenForUser(string userId)
+        {
+            var count = await _fastTokenRepository.CountAsync(x => x.UserEID == userId && x.CreationTime.Date == DateTime.Now.Date);
+            return count;
+        }
     }
 }

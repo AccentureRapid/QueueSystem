@@ -42,8 +42,8 @@
                 data: dto,
                 // 回调函数，接受服务器端返回给客户端的值，即result值
                 success: function (data) {
-                    if (data.result.exists) {
-                        abp.message.warn('领取失败，您在此时间段：' + selectText + '，已领取过快速通行令牌。');
+                    if (data.result.success == false) {
+                        abp.message.warn(data.result.message);
                     }
                     else {
                         abp.message.success('领取成功，快速通行令牌：' + selectText + '，在此时间段将享有优先访问。');
