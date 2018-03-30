@@ -67,7 +67,6 @@ namespace Pfizer.QueueSystem.Services
         {
             var result = await Task.Run(() =>
             {
-                //TODO add two column: 1 date 2 id in the timespan collection
                 var date = DateTime.Now.Date.ToString("yyyyMMdd");
                 var count = _fastTokenRepository.Count(x => x.UserEID == userId
                             && x.Date == date && x.TimeSpanId == timeSpanId);
