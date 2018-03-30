@@ -14,12 +14,16 @@ namespace Pfizer.QueueSystem.Services
     public class QueueSystemService : IQueueSystemService
     {
         private readonly IQueueSystemManager _queueSystemManager;
+        private readonly IQueueHistoryManager _queueHistoryManager;
         private readonly IObjectMapper _objectMapper;
 
         public QueueSystemService(IQueueSystemManager queueSystemManager,
+            IQueueHistoryManager queueHistoryManager,
             IObjectMapper objectMapper)
         {
             _queueSystemManager = queueSystemManager;
+            _queueHistoryManager = queueHistoryManager;
+
             _objectMapper = objectMapper;
         }
 
@@ -48,7 +52,8 @@ namespace Pfizer.QueueSystem.Services
             //1. get count of users before me, if == 0 : && total online customers < max count, redirectable = true
             //2. get count of users before me for display and predicted total minutes
             var result = new RefreshQueueInformationDto();
-            var predictedMinutesForOneUser = Convert.ToInt32(ConfigurationManager.AppSettings["PredictedMinutesForOneUser"]);
+
+            var predictedMinutesForOneUser = await _queueHistoryManager.GetAveragePredictedMinutes();
 
             var countBeforeMe = await _queueSystemManager.GetTotalUsersCountBeforeMe(dto.ConnectionId);
             var totalOnlineCustomers = await this.GetOnlineCustomersCount();
@@ -70,7 +75,7 @@ namespace Pfizer.QueueSystem.Services
             //1. get count of users before me, if == 0 : && total online customers < max count, redirectable = true
             //2. get count of users before me for display and predicted total minutes
             var result = new RefreshQueueInformationDto();
-            var predictedMinutesForOneUser = Convert.ToInt32(ConfigurationManager.AppSettings["PredictedMinutesForOneUser"]);
+            var predictedMinutesForOneUser = await _queueHistoryManager.GetAveragePredictedMinutes();
 
             var countBeforeMe = await _queueSystemManager.GetTotalUsersCountBeforeMe();
             var totalOnlineCustomers = await this.GetOnlineCustomersCount();

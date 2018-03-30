@@ -49,5 +49,32 @@ namespace Pfizer.QueueSystem.Services
                 await _queueHistoryLogRepostiory.UpdateAsync(log);
             }
         }
+
+        public async Task<int> GetAveragePredictedMinutes()
+        {
+            var result = await Task.Run(() =>
+            {
+
+                var count = 300;
+                var logs = _queueHistoryLogRepostiory.GetAll().Take(count).ToList();
+
+                var calculateMinutes = logs.Select(x =>
+                {
+                    var start = x.ConnectedTime;
+                    var end = x.DisconnectedTime;
+                    TimeSpan sp = end - start;
+                    var minutes = sp.TotalMinutes;
+                    return minutes;
+                }).ToList();
+
+
+
+                var averageMinutes = calculateMinutes.Sum(x => Convert.ToInt32(x)) / count;
+
+                return averageMinutes;
+            });
+
+            return result;
+        }
     }
 }

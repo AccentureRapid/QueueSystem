@@ -16,5 +16,6 @@ namespace Pfizer.QueueSystem.Services
 
         Task RemoveQueueHistory(string connectionId);
         Task UpdateDisconnectedTime(string connectionId);
+        Task<int> GetAveragePredictedMinutes();
     }
 }
