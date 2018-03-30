@@ -56,7 +56,7 @@ namespace Pfizer.QueueSystem.Services
             {
 
                 var count = 300;
-                var logs = _queueHistoryLogRepostiory.GetAll().Take(count).ToList();
+                var logs = _queueHistoryLogRepostiory.GetAll().OrderByDescending( x => x.CreationTime).Take(count).ToList();
 
                 var calculateMinutes = logs.Select(x =>
                 {
@@ -69,7 +69,7 @@ namespace Pfizer.QueueSystem.Services
 
 
 
-                var averageMinutes = calculateMinutes.Sum(x => Convert.ToInt32(x)) / count;
+                var averageMinutes = calculateMinutes.Sum(x => Convert.ToInt32(x)) / logs.Count;
 
                 return averageMinutes;
             });
