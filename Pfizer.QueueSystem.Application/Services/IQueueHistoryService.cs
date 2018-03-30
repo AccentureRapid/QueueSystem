@@ -14,5 +14,6 @@ namespace Pfizer.QueueSystem.Services
 
         Task<int> GetQueueHistoryCount();
         Task RemoveQueueHistory(string connectionId);
+        Task UpdateDisconnectedTime(string connectionId);
     }
 }

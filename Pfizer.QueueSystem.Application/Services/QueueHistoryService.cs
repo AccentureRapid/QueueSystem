@@ -16,6 +16,7 @@ namespace Pfizer.QueueSystem.Services
         private readonly IQueueHistoryManager _queueHistoryManager;
         private readonly IObjectMapper _objectMapper;
         private readonly IEventBus _eventBus;
+
         public QueueHistoryService(IQueueHistoryManager queueHistoryManager,
             IEventBus eventBus,
             IObjectMapper objectMapper)
@@ -42,6 +43,11 @@ namespace Pfizer.QueueSystem.Services
         public async Task RemoveQueueHistory(string connectionId)
         {
             await _queueHistoryManager.RemoveQueueHistory(connectionId);
+        }
+
+        public async Task UpdateDisconnectedTime(string connectionId)
+        {
+            await _queueHistoryManager.UpdateDisconnectedTime(connectionId);
         }
     }
 }

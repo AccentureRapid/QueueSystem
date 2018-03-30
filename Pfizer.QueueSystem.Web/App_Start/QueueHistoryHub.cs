@@ -64,6 +64,9 @@ public class QueueHistoryHub : Hub, ISingletonDependency
     {
         await base.OnDisconnected(stopCalled);
         await _queueHistoryService.RemoveQueueHistory(Context.ConnectionId);
+
+        await _queueHistoryService.UpdateDisconnectedTime(Context.ConnectionId);
+
         Logger.Debug("A client disconnected from QueueHistoryHub: " + Context.ConnectionId);
     }
 }

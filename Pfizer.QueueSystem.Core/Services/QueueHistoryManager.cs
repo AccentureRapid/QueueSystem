@@ -12,10 +12,13 @@ namespace Pfizer.QueueSystem.Services
     public class QueueHistoryManager: DomainService, IQueueHistoryManager
     {
         private readonly IRepository<QueueHistory> _queueHistoryRepository;
+        private readonly IRepository<QueueHistoryLog> _queueHistoryLogRepostiory;
 
-        public QueueHistoryManager(IRepository<QueueHistory> queueHistoryRepository)
+        public QueueHistoryManager(IRepository<QueueHistory> queueHistoryRepository,
+            IRepository<QueueHistoryLog> queueHistoryLogRepostiory)
         {
             _queueHistoryRepository = queueHistoryRepository;
+            _queueHistoryLogRepostiory = queueHistoryLogRepostiory;
         }
 
         public async Task<int> GetQueueHistoryCount()
@@ -34,6 +37,17 @@ namespace Pfizer.QueueSystem.Services
         public async Task RemoveQueueHistory(string connectionId)
         {
             await _queueHistoryRepository.DeleteAsync(x => x.ConnectionId == connectionId);
+        }
+
+        public async Task UpdateDisconnectedTime(string connectionId)
+        {
+            var logs = _queueHistoryLogRepostiory.GetAll().Where(x => x.ConnectionId == connectionId).ToList();
+            if (logs.Any())
+            {
+                var log = logs.FirstOrDefault();
+                log.DisconnectedTime = DateTime.Now;
+                await _queueHistoryLogRepostiory.UpdateAsync(log);
+            }
         }
     }
 }
