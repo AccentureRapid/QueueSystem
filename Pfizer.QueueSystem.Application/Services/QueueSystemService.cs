@@ -164,6 +164,7 @@ namespace Pfizer.QueueSystem.Services
                 fastTokenResult.Message = string.Format("领取失败，您今天领取的快速通行令牌已经超过系统配置的最大数 ({0})。", configuredTotalCountForFastTokenForOneUser.ToString());
             }
 
+            fastTokenResult.Success = success;
 
             if (fastTokenResult.Success)
             {
@@ -183,8 +184,6 @@ namespace Pfizer.QueueSystem.Services
 
                 }
             }
-
-            fastTokenResult.Success = success;
 
             return fastTokenResult;
         }
