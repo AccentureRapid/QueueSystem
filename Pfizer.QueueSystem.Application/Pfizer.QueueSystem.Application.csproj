@@ -185,6 +185,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\Evens.cs" />
+    <Compile Include="Events\EventHandler.cs" />
     <Compile Include="QueueSystemApplicationModule.cs" />
     <Compile Include="QueueSystemAppServiceBase.cs" />
     <Compile Include="Authorization\Accounts\AccountAppService.cs" />

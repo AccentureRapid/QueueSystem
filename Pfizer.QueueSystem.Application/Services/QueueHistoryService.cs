@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Abp.Events.Bus;
 using Abp.ObjectMapping;
+using Pfizer.QueueSystem.Application.Events;
 using Pfizer.QueueSystem.Entities;
 using Pfizer.QueueSystem.Services.Dto;
 
@@ -13,10 +15,13 @@ namespace Pfizer.QueueSystem.Services
     {
         private readonly IQueueHistoryManager _queueHistoryManager;
         private readonly IObjectMapper _objectMapper;
-        public QueueHistoryService(IQueueHistoryManager queueHistoryManager, 
+        private readonly IEventBus _eventBus;
+        public QueueHistoryService(IQueueHistoryManager queueHistoryManager,
+            IEventBus eventBus,
             IObjectMapper objectMapper)
         {
             _queueHistoryManager = queueHistoryManager;
+            _eventBus = eventBus;
             _objectMapper = objectMapper;
         }
 
@@ -30,6 +35,8 @@ namespace Pfizer.QueueSystem.Services
         {
             var entity = _objectMapper.Map<QueueHistory>(input);
             await _queueHistoryManager.SaveQueueHistory(entity);
+            _eventBus.Trigger(new QueueHistorySavedEventData { History = entity });
+
         }
 
         public async Task RemoveQueueHistory(string connectionId)

@@ -223,6 +223,10 @@
     <Compile Include="Migrations\201803271046223_DateAndTimeSpanIdadded.Designer.cs">
       <DependentUpon>201803271046223_DateAndTimeSpanIdadded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803300614121_QueueHistoryLogAdded.cs" />
+    <Compile Include="Migrations\201803300614121_QueueHistoryLogAdded.Designer.cs">
+      <DependentUpon>201803300614121_QueueHistoryLogAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="QueueSystemDataModule.cs" />
@@ -263,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803271046223_DateAndTimeSpanIdadded.resx">
       <DependentUpon>201803271046223_DateAndTimeSpanIdadded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803300614121_QueueHistoryLogAdded.resx">
+      <DependentUpon>201803300614121_QueueHistoryLogAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
