@@ -21,4 +21,9 @@ namespace Pfizer.QueueSystem.Services.Dto
 
         public string Message { get; set; }
     }
+
+    public class UserIdDto
+    {
+        public string NtId { get; set; }
+    }
 }

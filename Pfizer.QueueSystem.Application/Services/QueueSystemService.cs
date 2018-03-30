@@ -27,8 +27,21 @@ namespace Pfizer.QueueSystem.Services
             _objectMapper = objectMapper;
         }
 
-        public async Task<bool> CanAccessSystem()
+        public async Task<bool> CanAccessSystem(UserIdDto dto)
         {
+            //1. Fast token
+
+            if (!string.IsNullOrWhiteSpace(dto.NtId))
+            {
+                var haveTokenForNow = await _queueSystemManager.HaveFastTokenForNow(dto.NtId);
+                if (haveTokenForNow)
+                {
+                    return true;
+                } 
+            }
+
+            //2. normal logic : if onlineCustomersCount >= allowedMaxOnlineCustomerCount , it should be refirect to queue system
+
             var allowedMaxOnlineCustomerCount = Convert.ToInt32(ConfigurationManager.AppSettings["AllowedMaxOnlineCustomerCount"]);
             var onlineCustomersMinutes = Convert.ToInt32(ConfigurationManager.AppSettings["OnlineCustomerMinutes"]);
             var onlineCustomersCount = await _queueSystemManager.GetOnlineCustomersCount(DateTime.Now.AddMinutes(-onlineCustomersMinutes));
@@ -58,7 +71,7 @@ namespace Pfizer.QueueSystem.Services
             var countBeforeMe = await _queueSystemManager.GetTotalUsersCountBeforeMe(dto.ConnectionId);
             var totalOnlineCustomers = await this.GetOnlineCustomersCount();
             bool redirctable = false;
-            var canAccessSystem = await this.CanAccessSystem();
+            var canAccessSystem = await this.CanAccessSystem(new UserIdDto { NtId = string.Empty});
             if (countBeforeMe == 0 && canAccessSystem)
             {
                 redirctable = true;
@@ -80,7 +93,7 @@ namespace Pfizer.QueueSystem.Services
             var countBeforeMe = await _queueSystemManager.GetTotalUsersCountBeforeMe();
             var totalOnlineCustomers = await this.GetOnlineCustomersCount();
             bool redirctable = false;
-            var canAccessSystem = await this.CanAccessSystem();
+            var canAccessSystem = await this.CanAccessSystem(new UserIdDto { NtId = string.Empty });
             if (countBeforeMe == 0 && canAccessSystem)
             {
                 redirctable = true;

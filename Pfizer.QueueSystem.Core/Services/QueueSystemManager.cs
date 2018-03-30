@@ -129,5 +129,23 @@ namespace Pfizer.QueueSystem.Services
             && x.CreationTime.Day == DateTime.Now.Day);
             return count;
         }
+
+        public async Task<bool> HaveFastTokenForNow(string userId)
+        {
+            var result = await Task.Run(() => {
+
+                var tokens = _fastTokenRepository.GetAll().Where(
+                    x => x.StartTime <= DateTime.Now && x.EndTime >= DateTime.Now
+                    && x.UserEID == userId).ToList();
+                return tokens;
+            });
+
+            if (result.Any())
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
