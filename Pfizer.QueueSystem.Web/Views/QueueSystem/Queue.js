@@ -3,6 +3,9 @@
 (function () {
 
     $(function () {
+        var timeSpanCollection = {};
+                
+
         $.ajax({
             url: "../api/services/app/queueSystemService/GetTimeSpanCollection",
             // 数据发送方式
@@ -13,6 +16,8 @@
             data: 'result',
             // 回调函数，接受服务器端返回给客户端的值，即result值
             success: function (data) {
+                timeSpanCollection = data.result;
+
                 $.each(data.result, function (i) {
                     $('#timespan-container').append("<option value=" + data.result[i].id + ">" + data.result[i].text + "</option>");
                 });
@@ -29,6 +34,18 @@
             var dto = {};
             dto.id = $("#timespan-container option:selected").val();
             dto.ntId = getParameterByName('ntid');
+
+            //validation for take fast token which should be later than now
+            var now = new Date();
+            var selectedTimeSpan = getTimeSpanById(timeSpanCollection,dto.id);
+
+            var startTime = new Date(Date.parse(selectedTimeSpan.startTime));
+            var endTime = new Date(selectedTimeSpan.endTime);
+
+            if(now < startTime || now > endTime){
+               abp.message.warn('领取失败，不可以申领已过期的快速令牌。');
+               return;
+            }
 
             var selectText = $("#timespan-container option:selected").text();
 
@@ -120,6 +137,18 @@
             if (!results) return null;
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        function getTimeSpanById(timeSpanCollection,id) {
+            var timeSpan = {};
+            for (var i=0;i<timeSpanCollection.length;i++)
+            {
+               if(timeSpanCollection[i].id == id)
+               {
+                  timeSpan = timeSpanCollection[i];
+               }
+            }
+            return timeSpan;
         }
 
     });
