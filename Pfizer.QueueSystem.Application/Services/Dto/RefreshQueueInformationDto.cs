@@ -13,5 +13,6 @@ namespace Pfizer.QueueSystem.Services.Dto
         public bool Redirectable { get; set; }
         public int UsersCountBeforeMe { get; set; }
         public int PredictedMinutes { get; set; }
+        public int UsersInQueueCountForFastToken { get; set; }
     }
 }

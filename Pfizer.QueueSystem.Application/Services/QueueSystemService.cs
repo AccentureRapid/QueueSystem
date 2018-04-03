@@ -17,6 +17,7 @@ namespace Pfizer.QueueSystem.Services
         private readonly IQueueHistoryManager _queueHistoryManager;
         private readonly IObjectMapper _objectMapper;
 
+        private readonly int usersInQueueCountForFastToken = Convert.ToInt32(ConfigurationManager.AppSettings["UsersInQueueCountForFastToken"]);
         public QueueSystemService(IQueueSystemManager queueSystemManager,
             IQueueHistoryManager queueHistoryManager,
             IObjectMapper objectMapper)
@@ -89,6 +90,7 @@ namespace Pfizer.QueueSystem.Services
             result.Redirectable = redirctable;
             result.UsersCountBeforeMe = countBeforeMe;
             result.PredictedMinutes = predictedMinutesForOneUser * countBeforeMe;
+            result.UsersInQueueCountForFastToken = usersInQueueCountForFastToken;
 
             return result;
         }
@@ -111,7 +113,7 @@ namespace Pfizer.QueueSystem.Services
             result.Redirectable = redirctable;
             result.UsersCountBeforeMe = countBeforeMe;
             result.PredictedMinutes = predictedMinutesForOneUser * countBeforeMe;
-
+            result.UsersInQueueCountForFastToken = usersInQueueCountForFastToken;
             return result;
         }
 

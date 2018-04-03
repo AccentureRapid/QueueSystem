@@ -83,7 +83,13 @@
             console.log('received message: ' + message);
         };
 
-        queueHistoryHub.client.setQueueInformation = function (uersCountBeforeMe,predictedMinutes) { // Register for incoming messages
+        queueHistoryHub.client.setQueueInformation = function (uersCountBeforeMe,predictedMinutes,usersInQueueCountForFastToken) { // Register for incoming messages
+            if(uersCountBeforeMe > usersInQueueCountForFastToken)
+            {
+                $('#fast-token-container').show();
+            }else {
+                $('#fast-token-container').hide();
+            }
             $('#UersCountBeforeMe').text(uersCountBeforeMe);
             $('#PredictedMinutes').text(predictedMinutes);
         };
@@ -142,6 +148,12 @@
                         else {
                             $('#UersCountBeforeMe').text(data.result.usersCountBeforeMe);
                             $('#PredictedMinutes').text(data.result.predictedMinutes);
+                            if(data.result.usersCountBeforeMe > data.result.usersInQueueCountForFastToken)
+                             {
+                                $('#fast-token-container').show();
+                             }else {
+                                $('#fast-token-container').hide();
+                             }
                         }
                     },
 

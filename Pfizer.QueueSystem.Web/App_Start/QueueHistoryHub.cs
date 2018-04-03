@@ -7,6 +7,7 @@ using Pfizer.QueueSystem.Services;
 using Pfizer.QueueSystem.Web.Models.Events;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -34,6 +35,7 @@ public class QueueHistoryHub : Hub, ISingletonDependency
 
     public async Task Queue(string ntid)
     {
+        var usersInQueueCountForFastToken = Convert.ToInt32(ConfigurationManager.AppSettings["UsersInQueueCountForFastToken"]);
         var userId = ntid;
         var connectionId = Context.ConnectionId;
         var userName = userId;
@@ -46,7 +48,7 @@ public class QueueHistoryHub : Hub, ISingletonDependency
         });
 
         var refreshInformation = await _queueSystemService.GetQueueInfomationForFirsttime();
-        Clients.Client(Context.ConnectionId).setQueueInformation(refreshInformation.UsersCountBeforeMe, refreshInformation.PredictedMinutes);
+        Clients.Client(Context.ConnectionId).setQueueInformation(refreshInformation.UsersCountBeforeMe, refreshInformation.PredictedMinutes, usersInQueueCountForFastToken);
 
         var count = await _queueHistoryService.GetQueueHistoryCount();
         Clients.All.getMessage(string.Format("User {0}, currently there are {1} users in the queue. Message from client {2}", AbpSession.UserId, count, ntid));
