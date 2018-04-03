@@ -177,7 +177,7 @@ namespace Pfizer.QueueSystem.Services
 
             //1. Check UserFastToken is exists or not in the same time span.
             var exists = await _queueSystemManager.Exists(dto.NtId, dto.Id);
-            if (exists)
+            if (exists && success)
             {
                 success = false;
                 fastTokenResult.Message = "领取失败，您在此时间段，已领取过快速通行令牌。";
@@ -187,7 +187,7 @@ namespace Pfizer.QueueSystem.Services
             
             var count = await _queueSystemManager.GetTotalCountOfFastTokenForThisTimeSpan(timespan.StartTime, timespan.EndTime);
             var configuredCount = Convert.ToInt32(ConfigurationManager.AppSettings["TotalCountOfFastTokenForOneTimeSpan"]);
-            if (count >= configuredCount)
+            if (count >= configuredCount && success)
             {
                 success = false;
                 fastTokenResult.Message = string.Format("领取失败，在此时间段，系统发放的快速通行令牌 (总数:{0}) 已经被领取完毕。", configuredCount.ToString());
@@ -196,7 +196,7 @@ namespace Pfizer.QueueSystem.Services
             //3. the total count of fast token for the same day for one user <= TotalCountForFastTokenForOneUser
             var totalCountForFastTokenForOneUser = await _queueSystemManager.GetTotalCountOfFastTokenForUser(dto.NtId);
             var configuredTotalCountForFastTokenForOneUser = Convert.ToInt32(ConfigurationManager.AppSettings["TotalCountForFastTokenForOneUser"]);
-            if (totalCountForFastTokenForOneUser >= configuredTotalCountForFastTokenForOneUser)
+            if (totalCountForFastTokenForOneUser >= configuredTotalCountForFastTokenForOneUser && success)
             {
                 success = false;
                 fastTokenResult.Message = string.Format("领取失败，您今天领取的快速通行令牌已经超过系统配置的最大数 ({0})。", configuredTotalCountForFastTokenForOneUser.ToString());
