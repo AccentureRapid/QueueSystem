@@ -90,7 +90,32 @@
 
         abp.event.on('abp.signalr.connected', function () { // Register to connect event
             var ntid = getParameterByName('ntid');
-            queueHistoryHub.server.queue(ntid); // Send a message to the server
+            var dto = {};
+            dto.ntId = ntid;
+            $.ajax({
+                    url: "../api/services/app/queueSystemService/UserInQueue",
+                    // 数据发送方式
+                    type: "POST",
+                    // 接受数据格式
+                    dataType: "json",
+                    // 要传递的数据
+                    data: dto,
+                    // 回调函数，接受服务器端返回给客户端的值，即result值
+                    success: function (data) {
+                        if (data.result) {
+                            window.location.href = "error";
+                        }
+                        else {
+                           queueHistoryHub.server.queue(ntid); // Send a message to the server
+                        }
+                    },
+
+                    error: function (data) {
+                        console.log('data: ' + data);
+                    }
+                });
+            
+            
         });
 
 

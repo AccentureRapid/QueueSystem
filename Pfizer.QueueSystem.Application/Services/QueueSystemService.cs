@@ -210,5 +210,11 @@ namespace Pfizer.QueueSystem.Services
 
             return fastTokenResult;
         }
+
+        public async Task<bool> UserInQueue(UserIdDto dto)
+        {
+            var result = await _queueHistoryManager.UserInQueue(dto.NtId);
+            return result;
+        }
     }
 }

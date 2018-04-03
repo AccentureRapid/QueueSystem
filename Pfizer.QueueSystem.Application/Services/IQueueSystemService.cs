@@ -12,11 +12,9 @@ namespace Pfizer.QueueSystem.Services
     public interface IQueueSystemService : IApplicationService
     {
         Task<int> GetOnlineCustomersCount();
-
         Task<bool> CanAccessSystem(UserIdDto dto);
-
+        Task<bool> UserInQueue(UserIdDto dto);
         Task<List<TimeSpanDto>> GetTimeSpanCollection();
-
         Task<FastTokenResult> TakeFastToken(FastTokenDto dto);
 
         Task<RefreshQueueInformationDto> GetQueueInfomation(ConnectionDto dto);

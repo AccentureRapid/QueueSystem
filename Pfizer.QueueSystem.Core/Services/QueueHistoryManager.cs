@@ -76,5 +76,11 @@ namespace Pfizer.QueueSystem.Services
 
             return result;
         }
+
+        public async Task<bool> UserInQueue(string userEid)
+        {
+            var count = await _queueHistoryRepository.CountAsync(x => x.UserEID == userEid);
+            return count > 0;
+        }
     }
 }
