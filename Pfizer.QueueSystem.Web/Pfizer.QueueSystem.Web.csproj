@@ -3021,6 +3021,7 @@
     <Content Include="Views\QueueSystem\_Layout.cshtml" />
     <Content Include="Views\QueueSystem\_Layout.less" />
     <Content Include="Views\QueueSystem\_ViewStart.cshtml" />
+    <Content Include="Views\QueueSystem\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

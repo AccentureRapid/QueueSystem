@@ -1,0 +1,15 @@
+﻿@using Abp.MultiTenancy
+@using Abp.Web.Mvc.Extensions
+@using Microsoft.Owin.Security
+@model Pfizer.QueueSystem.Web.Models.Account.LoginFormViewModel
+@section Styles
+{
+    @Html.IncludeStyle("~/Views/QueueSystem/Queue.css")
+}
+
+
+<div class="container">
+    <div class="queue-information-container">
+        <h3>抱歉，您已经在别的客户端进行了排队，不需要再排队。谢谢合作。</h3>
+    </div>
+</div>
