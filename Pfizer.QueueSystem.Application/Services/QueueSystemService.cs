@@ -163,8 +163,8 @@ namespace Pfizer.QueueSystem.Services
             var success = true;
 
             //0. Check the token later than configured UsersInQueueCountForFastToken hours
-            var usersInQueueCountForFastToken = Convert.ToInt32(ConfigurationManager.AppSettings["UsersInQueueCountForFastToken"]);
-            var theTimeAvailable = DateTime.Now.AddHours(usersInQueueCountForFastToken);
+            var delayedHoursForFastToken = Convert.ToInt32(ConfigurationManager.AppSettings["DelayedHoursForFastToken"]);
+            var theTimeAvailable = DateTime.Now.AddHours(delayedHoursForFastToken);
             if (theTimeAvailable > timespan.StartTime)
             {
                 success = true;
