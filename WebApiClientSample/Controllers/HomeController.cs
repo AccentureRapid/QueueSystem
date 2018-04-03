@@ -11,6 +11,10 @@ namespace WebApiClientSample.Controllers
 {
     public class HomeController : Controller
     {
+        public class UserIdDto
+        {
+            public string NtId { get; set; }
+        }
         public ActionResult Index()
         {
             #region GetOnlineCustomersCount example
@@ -40,7 +44,7 @@ namespace WebApiClientSample.Controllers
             var client = new RestClient("http://localhost:8085");
             var request = new RestRequest("api/services/app/queueSystemService/CanAccessSystem", Method.POST);
 
-
+            request.AddJsonBody(new UserIdDto { NtId = "Admin" });
             // execute the request
             IRestResponse response = client.Execute(request);
             var content = response.Content; // raw content as string

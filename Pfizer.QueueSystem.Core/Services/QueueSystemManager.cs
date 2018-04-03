@@ -17,6 +17,7 @@ namespace Pfizer.QueueSystem.Services
         private readonly IRepository<QueueHistory> _queueHistoryRepository;
         private readonly IRepository<FastToken> _fastTokenRepository;
         private readonly IRepository<RequestTableForFace, Guid> _requestTableForFaceRepository;
+        private readonly IRepository<JumpQueueUser> _jumpQueueUserRepository;
         private readonly IIocManager _iocManager;
         private FaceDeviceLogDbContext db
         {
@@ -28,11 +29,13 @@ namespace Pfizer.QueueSystem.Services
         public QueueSystemManager(IRepository<QueueHistory> queueHistoryRepository,
              IRepository<FastToken> fastTokenRepository,
              IRepository<RequestTableForFace, Guid> requestTableForFaceRepository,
+             IRepository<JumpQueueUser> jumpQueueUserRepository,
             IIocManager iocManager)
         {
             _queueHistoryRepository = queueHistoryRepository;
             _fastTokenRepository = fastTokenRepository;
             _requestTableForFaceRepository = requestTableForFaceRepository;
+            _jumpQueueUserRepository = jumpQueueUserRepository;
             _iocManager = iocManager;
         }
 
@@ -146,6 +149,12 @@ namespace Pfizer.QueueSystem.Services
             }
 
             return false;
+        }
+
+        public async Task<bool> Exist(string userEId)
+        {
+            var result = await _jumpQueueUserRepository.CountAsync(x => x.UserEID == userEId);
+            return result > 0;
         }
     }
 }

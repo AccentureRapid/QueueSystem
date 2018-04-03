@@ -29,6 +29,16 @@ namespace Pfizer.QueueSystem.Services
 
         public async Task<bool> CanAccessSystem(UserIdDto dto)
         {
+            //0. Jump Queue Users have first priority
+            if (!string.IsNullOrEmpty(dto.NtId))
+            {
+                var existsJumpQueueUser = await _queueSystemManager.Exist(dto.NtId);
+                if (existsJumpQueueUser)
+                {
+                    return true;
+                } 
+            }
+
             //1. Fast token
 
             if (!string.IsNullOrWhiteSpace(dto.NtId))

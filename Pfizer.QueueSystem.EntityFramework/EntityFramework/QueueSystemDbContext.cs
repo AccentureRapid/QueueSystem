@@ -15,6 +15,7 @@ namespace Pfizer.QueueSystem.EntityFramework
         public DbSet<QueueHistory> QueueHistory { get; set; }
         public DbSet<FastToken> FastToken { get; set; }
         public DbSet<QueueHistoryLog> QueueHistoryLog { get; set; }
+        public DbSet<JumpQueueUser> JumpQueueUser { get; set; }
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
