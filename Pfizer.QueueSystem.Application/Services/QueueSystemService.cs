@@ -157,9 +157,23 @@ namespace Pfizer.QueueSystem.Services
 
         public async Task<FastTokenResult> TakeFastToken(FastTokenDto dto)
         {
-
+            var collection = await this.GetTimeSpanCollection();
+            var timespan = collection.Where(x => x.Id == dto.Id).FirstOrDefault();
             var fastTokenResult = new FastTokenResult();
             var success = true;
+
+            //0. Check the token later than configured UsersInQueueCountForFastToken hours
+            var usersInQueueCountForFastToken = Convert.ToInt32(ConfigurationManager.AppSettings["UsersInQueueCountForFastToken"]);
+            var theTimeAvailable = DateTime.Now.AddHours(usersInQueueCountForFastToken);
+            if (theTimeAvailable > timespan.StartTime)
+            {
+                success = true;
+            }
+            else
+            {
+                success = false;
+                fastTokenResult.Message = "领取失败，在此时间段，您不可以领取过快速通行令牌。";
+            }
 
             //1. Check UserFastToken is exists or not in the same time span.
             var exists = await _queueSystemManager.Exists(dto.NtId, dto.Id);
@@ -170,8 +184,7 @@ namespace Pfizer.QueueSystem.Services
             }
 
             //2. do not more than TotalCountOfFastTokenForOneTimeSpan
-            var collection = await this.GetTimeSpanCollection();
-            var timespan = collection.Where(x => x.Id == dto.Id).FirstOrDefault();
+            
             var count = await _queueSystemManager.GetTotalCountOfFastTokenForThisTimeSpan(timespan.StartTime, timespan.EndTime);
             var configuredCount = Convert.ToInt32(ConfigurationManager.AppSettings["TotalCountOfFastTokenForOneTimeSpan"]);
             if (count >= configuredCount)

@@ -6958,3 +6958,21 @@ DEBUG 2018-04-03 17:58:23,385 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        -
 DEBUG 2018-04-03 17:58:42,721 [31   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"acd76d92-8ebc-4792-8918-1e32d519d3b9","IpAddress":"10.202.189.140","TenantId":null,"UserId":null,"ConnectTime":"2018-04-03T17:58:42.721811+08:00","Properties":{}}
 DEBUG 2018-04-03 17:58:42,722 [31   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: acd76d92-8ebc-4792-8918-1e32d519d3b9
 DEBUG 2018-04-03 17:58:42,728 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: acd76d92-8ebc-4792-8918-1e32d519d3b9
+DEBUG 2018-04-03 18:01:01,989 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: acd76d92-8ebc-4792-8918-1e32d519d3b9
+DEBUG 2018-04-03 18:01:02,029 [12   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: acd76d92-8ebc-4792-8918-1e32d519d3b9
+DEBUG 2018-04-03 18:01:14,048 [31   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 9d02fd3f-f01e-4c22-bed2-e5a24e8e5671
+DEBUG 2018-04-03 18:01:14,229 [14   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 9d02fd3f-f01e-4c22-bed2-e5a24e8e5671
+DEBUG 2018-04-03 18:01:14,365 [31   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"461de8c5-adbe-4766-93ce-986d811782cf","IpAddress":"10.202.189.140","TenantId":null,"UserId":null,"ConnectTime":"2018-04-03T18:01:14.3657328+08:00","Properties":{}}
+DEBUG 2018-04-03 18:01:14,366 [31   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 461de8c5-adbe-4766-93ce-986d811782cf
+DEBUG 2018-04-03 18:01:14,371 [64   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 461de8c5-adbe-4766-93ce-986d811782cf
+DEBUG 2018-04-03 18:01:19,210 [70   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 461de8c5-adbe-4766-93ce-986d811782cf
+DEBUG 2018-04-03 18:01:19,284 [70   ] QueueHistoryHub                          - A client disconnected from QueueHistoryHub: 461de8c5-adbe-4766-93ce-986d811782cf
+DEBUG 2018-04-03 18:01:19,443 [86   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"4637c5d0-bcac-439c-90c5-b3c24702690c","IpAddress":"10.202.189.140","TenantId":null,"UserId":null,"ConnectTime":"2018-04-03T18:01:19.443+08:00","Properties":{}}
+DEBUG 2018-04-03 18:01:19,443 [86   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 4637c5d0-bcac-439c-90c5-b3c24702690c
+DEBUG 2018-04-03 18:01:19,451 [57   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 4637c5d0-bcac-439c-90c5-b3c24702690c
+DEBUG 2018-04-03 18:01:32,661 [57   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"df8794a9-2cf3-4265-b67d-ffc1d2349b2b","IpAddress":"10.202.189.140","TenantId":null,"UserId":null,"ConnectTime":"2018-04-03T18:01:32.661794+08:00","Properties":{}}
+DEBUG 2018-04-03 18:01:32,661 [57   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: df8794a9-2cf3-4265-b67d-ffc1d2349b2b
+DEBUG 2018-04-03 18:01:32,673 [28   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: df8794a9-2cf3-4265-b67d-ffc1d2349b2b
+DEBUG 2018-04-03 18:01:47,272 [85   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"0aded4cd-42c4-4192-88e9-3219d0efbccf","IpAddress":"10.202.189.140","TenantId":null,"UserId":null,"ConnectTime":"2018-04-03T18:01:47.2723512+08:00","Properties":{}}
+DEBUG 2018-04-03 18:01:47,273 [85   ] QueueHistoryHub                          - A client connected to QueueHistoryHub: 0aded4cd-42c4-4192-88e9-3219d0efbccf
+DEBUG 2018-04-03 18:01:47,282 [64   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 0aded4cd-42c4-4192-88e9-3219d0efbccf
