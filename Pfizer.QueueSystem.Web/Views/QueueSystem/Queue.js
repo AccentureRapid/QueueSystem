@@ -99,31 +99,33 @@
             var connectionId = $.connection.hub.id;
             var dto = {};
             dto.connectionId = connectionId;
+            if(dto.connectionId){
+                   $.ajax({
+                    url: "../api/services/app/queueSystemService/GetQueueInfomation",
+                    // 数据发送方式
+                    type: "POST",
+                    // 接受数据格式
+                    dataType: "json",
+                    // 要传递的数据
+                    data: dto,
+                    // 回调函数，接受服务器端返回给客户端的值，即result值
+                    success: function (data) {
+                        if (data.result.redirectable) {
+                            var returnUrl = getParameterByName("returnUrl");
+                            window.location.href = returnUrl;
+                        }
+                        else {
+                            $('#UersCountBeforeMe').text(data.result.usersCountBeforeMe);
+                            $('#PredictedMinutes').text(data.result.predictedMinutes);
+                        }
+                    },
 
-            $.ajax({
-                url: "../api/services/app/queueSystemService/GetQueueInfomation",
-                // 数据发送方式
-                type: "POST",
-                // 接受数据格式
-                dataType: "json",
-                // 要传递的数据
-                data: dto,
-                // 回调函数，接受服务器端返回给客户端的值，即result值
-                success: function (data) {
-                    if (data.result.redirectable) {
-                        var returnUrl = getParameterByName("returnUrl");
-                        window.location.href = returnUrl;
+                    error: function (data) {
+                        console.log('data: ' + data);
                     }
-                    else {
-                        $('#UersCountBeforeMe').text(data.result.usersCountBeforeMe);
-                        $('#PredictedMinutes').text(data.result.predictedMinutes);
-                    }
-                },
-
-                error: function (data) {
-                    console.log('data: ' + data);
-                }
-            });
+                });
+            }
+            
             setTimeout(StartRefreshQueueInformation, 5000);
         }
 
