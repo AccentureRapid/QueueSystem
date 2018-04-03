@@ -42,7 +42,7 @@
             var startTime = new Date(Date.parse(selectedTimeSpan.startTime));
             var endTime = new Date(selectedTimeSpan.endTime);
 
-            if(now < startTime || now > endTime){
+            if(now > endTime){
                abp.message.warn('领取失败，不可以申领已过期的快速令牌。');
                return;
             }

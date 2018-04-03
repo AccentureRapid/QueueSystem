@@ -164,15 +164,15 @@ namespace Pfizer.QueueSystem.Services
 
             //0. Check the token later than configured UsersInQueueCountForFastToken hours
             var delayedHoursForFastToken = Convert.ToInt32(ConfigurationManager.AppSettings["DelayedHoursForFastToken"]);
-            var theTimeAvailable = timespan.StartTime.AddHours(delayedHoursForFastToken);
-            if (DateTime.Now > theTimeAvailable)
+            var theTimeAvailable = DateTime.Now.AddHours(delayedHoursForFastToken);
+            if (theTimeAvailable < timespan.EndTime)
             {
                 success = true;
             }
             else
             {
                 success = false;
-                fastTokenResult.Message = "领取失败，在此时间段，您不可以领取过快速通行令牌。";
+                fastTokenResult.Message = "领取失败，在此时间段，您不可以领取快速通行令牌。";
             }
 
             //1. Check UserFastToken is exists or not in the same time span.
